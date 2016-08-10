@@ -36,7 +36,7 @@ Plugins are loaded at runtime
 		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
 		```
-4. From your command line:  
+4. From your bash (git-bash or similar) command line:  
 
     ```bash
     # Clone this repository
