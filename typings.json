@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js",
+    "jasmine": "registry:dt/jasmine",
+    "node": "registry:dt/node",
+    "ref": "registry:dt/ref",
+    "ref-struct": "registry:dt/ref-struct",
+    "ffi": "registry:dt/node-ffi"
+  }
+}

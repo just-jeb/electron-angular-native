@@ -1,0 +1,7 @@
+﻿  StringProvider.cpp
+     Creating library C:\git\meltedspark\electron-boilerplate\app\plugins\native\simple-dll\x64\Release\simple-dll.lib and object C:\git\meltedspark\electron-boilerplate\app\plugins\native\simple-dll\x64\Release\simple-dll.exp
+  Generating code
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  simple-dll.vcxproj -> C:\git\meltedspark\electron-boilerplate\app\plugins\native\simple-dll\x64\Release\simple-dll.dll
+  simple-dll.vcxproj -> C:\git\meltedspark\electron-boilerplate\app\plugins\native\simple-dll\x64\Release\simple-dll.pdb (Full PDB)
