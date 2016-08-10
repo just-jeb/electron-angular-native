@@ -25,12 +25,12 @@ Plugins are loaded at runtime
 3. If you're behind a corporate firewall:
 	* Configure `npm` proxy:  
 		```bash
-		npm config set proxy http://proxy.company.com:port
+		npm config set proxy http://proxy.company.com:port  
 		npm config set https-proxy http://proxy.company.com:port
 		```
 	* Add a proxy setting to `.typingsrc` file:   
 		```bash
-		proxy=http://proxy.company.com:port
+		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
 		```
 4. From your command line:  
