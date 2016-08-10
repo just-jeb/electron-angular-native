@@ -22,13 +22,16 @@ Plugins are loaded at runtime
 
 1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
 2. Make sure you have necessary native development tools: refer to the **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
-3. If you're behind a corporate firewall:
+3. If you're behind a corporate firewall:  
+
 	* Configure `npm` proxy:  
+	
 		```bash
 		npm config set proxy http://proxy.company.com:port  
 		npm config set https-proxy http://proxy.company.com:port
 		```
-	* Add a proxy setting to `.typingsrc` file:   
+	* Add a proxy setting to `.typingsrc` file:  
+	
 		```bash
 		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
@@ -49,12 +52,10 @@ Plugins are loaded at runtime
 The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager) with NSIS installer.  
 Run the following from the root folder to create a distribution for:
  - Windows 32 bit:  
- 
 	```bash
 	npm run dist:win32
 	```
- - Windows 64 bit:  
- 
+ - Windows 64 bit:   
 	```bash
 	npm run dist:win64
 	```  
