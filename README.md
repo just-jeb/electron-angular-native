@@ -37,7 +37,7 @@ Plugins are loaded at runtime
 		cd electron-angular2-native
 		```  
 		
-3. Install and run:  
+3. Install and run  
 
 	* If you're behind a corporate firewall configure `npm` and `.typingsrc` proxy:  
 		
@@ -52,7 +52,7 @@ Plugins are loaded at runtime
 		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
 		```
-	* Make sure you have `python` and appropriate `C\C++ compiler toolchain` installed as it described in **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
+	* Make sure you have `python v2.7` and appropriate `C\C++ compiler toolchain` installed as it described in **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
 	* From your bash (git-bash or similar) command line:  
 		
 		```bash
