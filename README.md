@@ -22,31 +22,43 @@ Plugins are loaded at runtime
 
 1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
 2. Make sure you have necessary native development tools: refer to the **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
-3. If you're behind a corporate firewall:  
-
-	* Configure `npm` proxy:  
+3. Clone the repository
+	* If you're behind a corporate firewall configure `git` proxy:  
 	
+		```bash
+		git config --global http.proxy http://proxy.company.com:port  
+		git config --global https.proxy http://proxy.company.com:port  
+		```
+	* From your bash (git-bash or similar) command line:
+
+		```bash
+		# Clone this repository
+		git clone https://github.com/meltedspark/electron-angular2-native
+		# Go into the repository
+		cd electron-angular2-native
+		```  
+		
+4. Install and run:  
+
+	* If you're behind a corporate firewall configure `npm` and `.typingsrc` proxy:  
+		
 		```bash
 		npm config set proxy http://proxy.company.com:port  
 		npm config set https-proxy http://proxy.company.com:port
 		```
-	* Add a proxy setting to `.typingsrc` file:  
+		
+		Edit `.typingsrc` file:  
 	
 		```bash
 		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
 		```
-4. From your bash (git-bash or similar) command line:  
-
-    ```bash
-    # Clone this repository
-    git clone https://github.com/meltedspark/electron-angular2-native
-    # Go into the repository
-    cd electron-angular2-native
-    # Install dependencies and run the app
-    npm install && npm start
-    ```  
-	
+	* From your bash (git-bash or similar) command line:  
+		
+		```bash
+		# Install dependencies and run the app
+		npm install && npm start
+		```  
 ## To distribute
 
 The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager) with NSIS installer.  
