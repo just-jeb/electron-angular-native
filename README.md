@@ -21,8 +21,7 @@ Plugins are loaded at runtime
 ## To Use
 
 1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
-2. Make sure you have necessary native development tools: refer to the **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
-3. Clone the repository
+2. Clone the repository
 	* If you're behind a corporate firewall configure `git` proxy:  
 	
 		```bash
@@ -38,7 +37,7 @@ Plugins are loaded at runtime
 		cd electron-angular2-native
 		```  
 		
-4. Install and run:  
+3. Install and run:  
 
 	* If you're behind a corporate firewall configure `npm` and `.typingsrc` proxy:  
 		
@@ -53,6 +52,7 @@ Plugins are loaded at runtime
 		proxy=http://proxy.company.com:port  
 		rejectUnauthorized=false
 		```
+	* Make sure you have `python` and appropriate `C\C++ compiler toolchain` installed as it described in **Installation** section of [node-gyp](https://github.com/nodejs/node-gyp).
 	* From your bash (git-bash or similar) command line:  
 		
 		```bash
