@@ -102,10 +102,12 @@ Plugins are loaded at runtime
 The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager) with NSIS installer.  
 Run the following from the root folder to create a distribution for:
  - Windows 32 bit:  
+ 
 	```bash
 	npm run dist:win32
 	```
  - Windows 64 bit:   
+ 
 	```bash
 	npm run dist:win64
 	```  
