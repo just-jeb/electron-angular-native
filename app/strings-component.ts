@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { StringListComponent } from './string-list.component';
-import { PluginsProvider } from './pluginsprovider'
+import { PluginsProvider } from './plugins-provider'
 
 @Component({
   selector: 'my-strings',

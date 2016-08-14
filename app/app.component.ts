@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StringsComponent } from './strings.component'
+import { StringsComponent } from './strings-component'
 @Component({
   selector: 'my-app',
   template: '<my-strings></my-strings>',

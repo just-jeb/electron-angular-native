@@ -1,4 +1,4 @@
-import { StringPlugin } from './StringPlugin'
+import { StringPlugin } from './string-plugin'
 import { Injectable } from '@angular/core'
 declare var System: any;
 @Injectable()
@@ -13,7 +13,7 @@ export class PluginsProvider {
         plugin = require('plugins/native/node-addon/cpp-string-plugin1.js');
         this.plugins.push(new plugin[Object.keys(plugin)[0]]())
         //Native implementation of StringPlugin interface without proxy class
-        plugin = require('plugins/native/node-addon/StringProvider.node');
+        plugin = require('plugins/native/node-addon/string-provider.node');
         this.plugins.push(plugin)
         //Native implementation of StringPlugin interface with proxy class. 
         //Loaded using node.js module resolution mechanism to avoid mapping all the transitive dependencies in systemjs.config.js

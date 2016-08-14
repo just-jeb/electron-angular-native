@@ -1,4 +1,4 @@
-import { StringPlugin } from '../../../StringPlugin';
+import { StringPlugin } from '../../../string-plugin';
 import { DynamicLibrary, Library, types } from 'ffi';
 
 export class CppStringPluginProxy implements StringPlugin { 

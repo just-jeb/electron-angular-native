@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PluginsProvider } from './pluginsprovider';
-import { StringPlugin } from './stringplugin';
+import { PluginsProvider } from './plugins-provider';
+import { StringPlugin } from './string-plugin';
 
 @Component({
   selector: 'string-list',

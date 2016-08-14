@@ -1,4 +1,4 @@
-import { StringPlugin } from '../StringPlugin'
+import { StringPlugin } from '../string-plugin'
 
 export class JsStringPlugin implements StringPlugin{ 
     getString(): string{
