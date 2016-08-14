@@ -20,8 +20,12 @@
         "app-category-type": "com.meltedspark.opensource",
 		"asar": false,
         "win": {
-            "target": "nsis"
+            "target": "nsis",
+			"icon": "installer-resources/icon.ico"
         },
+		"mac": {
+			"icon": "installer-resources/icon.icns"
+		},
         "linux": {
             "target": "deb"
         }
