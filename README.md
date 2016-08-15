@@ -99,18 +99,29 @@ Plugins are loaded at runtime
 		
 ## To distribute
 
-The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager) with NSIS installer.  
-Run the following from the root folder to create a distribution for:
- - Windows 32 bit:  
+The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager).  
+ - Make sure you have installed [required system packages](https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build)
+ - Run the following from the root folder to create a distribution for:
+	- Windows 32 bit:  
  
-	```bash
-	npm run dist:win32
-	```
- - Windows 64 bit:   
+		```bash
+		npm run dist:win32
+		```
+	- Windows 64 bit:   
  
-	```bash
-	npm run dist:win64
-	```  
+		```bash
+		npm run dist:win64
+		```  
+	- Linux 32 bit:
+	
+		```bash
+		npm run dist:linux32
+		```	
+	- Linux 64 bit:
+	
+		```bash
+		npm run dist:linux64
+		```			
 	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)
