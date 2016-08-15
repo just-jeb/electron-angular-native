@@ -1,10 +1,11 @@
 {
 	"name": "electron-angular2-native",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "Electron application for use with native code and Angular 2",
 	"main": "main.electron.js",
 	"author": {
-		"name": "Evgeny Barabanov"
+		"name": "Evgeny Barabanov",
+		"email": "your@mail.com"
 	},
 	"license": "Apache-2.0",
 	"private": true,
