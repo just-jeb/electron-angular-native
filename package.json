@@ -20,16 +20,16 @@
         "app-category-type": "com.meltedspark.opensource",
 		"asar": false,
         "win": {
-            "target": "nsis",
-			"icon": "installer-resources/icon.ico"
+            "target": "nsis"
         },
-		"mac": {
-			"icon": "installer-resources/icon.icns"
-		},
         "linux": {
             "target": "deb"
         }
     },
+	
+	"directories": {
+		"buildResources": "build-resources"
+	},
 	
     "scripts": {
 		"postinstall": " typings install && install-app-deps",
