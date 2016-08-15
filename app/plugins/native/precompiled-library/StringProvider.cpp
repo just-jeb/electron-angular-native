@@ -8,10 +8,10 @@
 extern "C" 
 {
 #endif
-LIB_EXPORT char const* getString() 
-{
+	LIB_EXPORT char const* getString() 
+	{
     return "c++ precompiled library string";
-}
+	}
 #ifdef __cplusplus
 }
 #endif

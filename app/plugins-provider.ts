@@ -17,7 +17,7 @@ export class PluginsProvider {
         this.plugins.push(plugin)
         //Native implementation of StringPlugin interface with proxy class. 
         //Loaded using node.js module resolution mechanism to avoid mapping all the transitive dependencies in systemjs.config.js
-        plugin = System._nodeRequire('./plugins/native/simple-dll/cpp-string-plugin2.js');
+        plugin = System._nodeRequire('./plugins/native/precompiled-library/cpp-string-plugin2.js');
         this.plugins.push(new plugin[Object.keys(plugin)[0]]);
     }
 
