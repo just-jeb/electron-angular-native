@@ -10,6 +10,7 @@ LDFLAGS_BASE = -Wall -fPIC -Wls
 OS = $(shell uname)
 
 ifeq ($(OS),Darwin)
+	OS = mac
 	LDFLAGS_BASE += -dynamiclib
 	simple_library = $(simple_library_name).dylib
 else	
@@ -19,12 +20,12 @@ endif
 
 32bit: CPPFLAGS = $(CPPFLAGS_BASE) -m32
 32bit: LDFLAGS = $(LDFLAGS_BASE) -m32
-32bit: OUTPUT_DIR = Release/$(OS)
+32bit: OUTPUT_DIR = ia32/$(OS)
 32bit: $(simple_library) clean_objects
 
 64bit: CPPFLAGS = $(CPPFLAGS_BASE) -m64
 64bit: LDFLAGS = $(LDFLAGS_BASE) -m64
-64bit: OUTPUT_DIR = x64/Release/$(OS)
+64bit: OUTPUT_DIR = x64/$(OS)
 64bit: $(simple_library) clean_objects
 
 $(simple_library): $(simple_library_objects) 
@@ -38,6 +39,6 @@ clean_objects:
 	rm -f *.o
 
 clean: clean_objects
-	rm -f Release/$(OS)/$(simple_library) x64/Release/$(OS)/$(simple_library)
+	rm -f ia32/$(OS)/$(simple_library) x64/$(OS)/$(simple_library)
 
 

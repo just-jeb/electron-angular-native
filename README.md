@@ -122,6 +122,11 @@ The application is packaged using [electron-packager](https://github.com/electro
 		```bash
 		npm run dist:linux64
 		```			
+	- OSX:
+	
+		```bash
+		npm run dist:osx
+		```	
 	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)
