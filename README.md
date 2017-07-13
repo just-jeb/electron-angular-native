@@ -1,6 +1,6 @@
-# electron-angular2-native
+# electron-angular-native
 
-An easy to use, ready for distribution boilerplate for Electron applications which use Angular 2 along with native modules (node.js addons and regular native libraries).  
+An easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application has a pluggable structure and consists of list of strings, while each string is provided by a different plugin:
  - String provided by pure JS class
  - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
