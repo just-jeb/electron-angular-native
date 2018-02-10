@@ -4,15 +4,16 @@ directories:
   app: dist
 productName: electron-angular-native
 win:
-  icon: dist/favicon.jpg
+  icon: dist/favicon.png
   target:
     - portable
 mac:
-  icon: dist/favicon.jpg
+  icon: dist/favicon.png
   target:
     - dmg
 linux:
   icon: dist
   target:
     - AppImage
+nodeGypRebuild: true
 electronVersion: 1.8.2
