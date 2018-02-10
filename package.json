@@ -1,16 +1,19 @@
 {
   "name": "electron-angular-native",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0-beta",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "npm run serve",
+    "build": "ng build --prod && npm run compile:main:dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:electron:main": "tsc src/main.electron.ts --outDir serve",
-    "electron:serve": "npm run build:electron:main && concurrently \"ng build --watch --output-path=serve/\" \"electron ./ --serve\""
+    "compile:main:serve": "tsc src/main.electron.ts --outDir serve",
+    "compile:main:dist": "tsc src/main.electron.ts --outDir dist",
+    "serve": "npm run compile:main:serve && concurrently \"ng build --watch --output-path=serve/\" \"electron ./ --serve\"",
+    "build:prod": "cross-env NODE_ENV=production npm run build && cpy app.package.json dist --rename=package.json",
+    "package:windows": "npm run build:prod && npx electron-builder build --windows"
   },
   "main": "serve/main.electron.js",
   "private": true,
@@ -38,6 +41,8 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "cpy-cli": "^1.0.1",
+    "cross-env": "^5.1.3",
     "electron-builder": "^19.56.0",
     "electron-reload": "^1.2.2",
     "jasmine-core": "~2.8.0",

@@ -1,0 +1,18 @@
+directories:
+  output: build
+  buildResources: build
+  app: dist
+productName: electron-angular-native
+win:
+  icon: dist/favicon.jpg
+  target:
+    - portable
+mac:
+  icon: dist/favicon.jpg
+  target:
+    - dmg
+linux:
+  icon: dist
+  target:
+    - AppImage
+electronVersion: 1.8.2

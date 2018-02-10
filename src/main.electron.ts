@@ -1,12 +1,16 @@
 import {app, BrowserWindow, screen} from 'electron';
 import * as path from 'path';
-
-let win;
 import * as url from 'url';
 
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, '../node_modules', '.bin', 'electron'),
-});
+const args = process.argv.slice(1);
+let win;
+const serve = args.some(val => val === '--serve');
+
+if (serve) {
+  require('electron-reload')(__dirname, {
+    electron: path.join(__dirname, '../node_modules', '.bin', 'electron'),
+  });
+}
 
 function createWindow() {
 
@@ -27,8 +31,9 @@ function createWindow() {
     slashes: true
   }));
 
-  win.webContents.openDevTools();
-
+  if (serve) {
+    win.webContents.openDevTools();
+  }
   // Emitted when the window is closed.
   win.on('closed', () => {
     // Dereference the window object, usually you would store window
