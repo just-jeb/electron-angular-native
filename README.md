@@ -4,7 +4,7 @@ Easy to use, ready for distribution boilerplate for Electron applications which 
 The application consists of list of strings, while each string is loaded from native module in a different way:
  - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
  - **[To be supported]** String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) directly
- - String provided by native library (dll) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
+ - String provided by native library (dll, so or dylib) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
 
 ## Features
 
