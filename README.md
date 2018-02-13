@@ -11,10 +11,11 @@ The application consists of list of strings, while each string is loaded from na
  - [Electron](http://electron.atom.io/) 1.8.2
  - [Angular](https://angular.io/) 5.2
  - [Angular CLI](https://cli.angular.io/) 1.6.8
+ - [Angular AoT](https://angular.io/guide/aot-compiler) for production
  - [Typescript](https://www.typescriptlang.org/) 2.5.3
- - Hot reload
  - **[To be supported]** Native node.js addons (using [nan](https://github.com/nodejs/nan))
  - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
+ - Hot reload for development
 
 ## To Use
 
@@ -121,7 +122,12 @@ The application consists of list of strings, while each string is loaded from na
 		```bash
 		npm run dist:osx
  - Be aware that cross-platform builds are [performed](https://www.electron.build/multi-platform-build) on remote server
+ - Distributed application is built in production mode (to benefit from [Angular AoT](https://angular.io/guide/aot-compiler)).  
+   If for some reason you want it in dev mode (JIT), run `npm run dist:dev` 
  - Build artifact can be found in build-artifacts folder
+ 
+## Application info
+You can define application name, version author and runtime node dependecies in `app.package.js`
 	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)
