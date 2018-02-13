@@ -1,5 +1,8 @@
 {
   "name": "ElectronAngularNativeApp",
   "version": "1.0.0",
-  "main": "main.electron.js"
+  "main": "main.electron.js",
+  "dependencies": {
+    "ffi": "^2.2.0"
+  }
 }

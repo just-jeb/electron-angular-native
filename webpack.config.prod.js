@@ -513,7 +513,7 @@ module.exports = {
         context: "src",
         to: "",
         from: {
-          glob: "src\\assets\\**\\*",
+          glob: "assets/**/*",
           dot: true
         }
       },
@@ -521,7 +521,7 @@ module.exports = {
         context: "src",
         to: "",
         from: {
-          glob: "src\\favicon.png",
+          glob: "favicon.png",
           dot: true
         }
       }

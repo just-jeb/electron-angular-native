@@ -11,11 +11,11 @@
 	{
       "target_name": "action_after_build",
       "type": "none",
-      "dependencies": ['string-provider'],
+      "dependencies": ["string-provider"],
       "copies": [
         {
           "files": [ "<(PRODUCT_DIR)/string-provider.node" ],
-          "destination": "../../../native-artifacts/native-addon"
+          "destination": "../../../native-artifacts/native-addons"
         }
       ]
     }

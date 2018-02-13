@@ -31,9 +31,9 @@ function createWindow() {
     slashes: true
   }));
 
-  if (serve) {
+  // if (serve) {
     win.webContents.openDevTools();
-  }
+  // }
   // Emitted when the window is closed.
   win.on('closed', () => {
     // Dereference the window object, usually you would store window

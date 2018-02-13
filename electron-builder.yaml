@@ -16,4 +16,5 @@ linux:
   target:
     - AppImage
 nodeGypRebuild: true
+asar: false
 electronVersion: 1.8.2
