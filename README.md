@@ -20,7 +20,7 @@ The application consists of list of strings, while each string is loaded from na
 ## To Use
 
 1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
-   * **Node 9 is not supported yet** due to an issue in node-ffi  
+   * **Node 9 is not supported yet** due to a [node-ffi issue](https://github.com/node-ffi/node-ffi/issues/438) 
    * **bash command line is required (use git-bash for windows)**
 2. Clone the repository
 	* If you're behind a corporate firewall configure `git` proxy:  
