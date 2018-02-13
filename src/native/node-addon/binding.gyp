@@ -7,7 +7,7 @@
           "<!(node -e \"require('nan')\")"
       ]
     },
-	
+
 	{
       "target_name": "action_after_build",
       "type": "none",
@@ -15,7 +15,7 @@
       "copies": [
         {
           "files": [ "<(PRODUCT_DIR)/string-provider.node" ],
-          "destination": "."
+          "destination": "../../../native-artifacts/native-addon"
         }
       ]
     }

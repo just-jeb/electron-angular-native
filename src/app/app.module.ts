@@ -4,7 +4,9 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {LINK_PROVIDERS} from './link-provider';
-import {PrecompiledLibraryLinkService} from '../native/precompiled-library/precompiled-library-link.service';
+import {PrecompiledLibraryLinkService} from './precompiled-library-link.service';
+import {NgxElectronModule} from 'ngx-electron';
+import {NodeAddonLinkService} from './node-addon-link.service';
 
 
 @NgModule({
@@ -12,14 +14,15 @@ import {PrecompiledLibraryLinkService} from '../native/precompiled-library/preco
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxElectronModule
   ],
   providers: [
-/*    {
+    {
       provide: LINK_PROVIDERS,
       useClass: NodeAddonLinkService,
       multi: true
-    },*/
+    },
     {
       provide: LINK_PROVIDERS,
       useClass: PrecompiledLibraryLinkService,
@@ -30,3 +33,4 @@ import {PrecompiledLibraryLinkService} from '../native/precompiled-library/preco
 })
 export class AppModule {
 }
+
