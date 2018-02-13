@@ -455,9 +455,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    historyApiFallback: true
-  },
   plugins: [
     new NoEmitOnErrorsPlugin(),
     new CopyWebpackPlugin([
@@ -601,4 +598,7 @@ module.exports = {
     clearImmediate: false,
     setImmediate: false
   },
+  devServer: {
+    historyApiFallback: true
+  }
 };
