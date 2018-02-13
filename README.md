@@ -1,26 +1,26 @@
-# electron-angular-native
+# electron-angular-native (version 2.0.0)
 
-An easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
-The application has a pluggable structure and consists of list of strings, while each string is provided by a different plugin:
- - String provided by pure JS class
+Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
+The application consists of list of strings, while each string is loaded from native module in a different way:
  - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
- - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) directly
+ - **[To be supported]** String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) directly
  - String provided by native library (dll) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
 
-Plugins are loaded at runtime
 ## Features
 
- - [Electron](http://electron.atom.io/)
- - [Angular 2](https://angular.io/)
- - [System.js](https://github.com/systemjs/systemjs)
- - [Typescript](https://www.typescriptlang.org/)
- - [Node.js](https://nodejs.org/en/)
- - Native node.js addons (using [nan](https://github.com/nodejs/nan))
- - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi))
+ - [Electron](http://electron.atom.io/) 1.8.2
+ - [Angular](https://angular.io/) 5.2
+ - [Angular CLI](https://cli.angular.io/) 1.6.8
+ - [Typescript](https://www.typescriptlang.org/) 2.5.3
+ - Hot reload
+ - **[To be supported]** Native node.js addons (using [nan](https://github.com/nodejs/nan))
+ - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
 
 ## To Use
 
-1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
+1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
+   * **Node 9 is not supported yet** due to an issue in node-ffi  
+   * **bash command line is required (use git-bash for windows)**
 2. Clone the repository
 	* If you're behind a corporate firewall configure `git` proxy:  
 	
@@ -32,27 +32,20 @@ Plugins are loaded at runtime
 
 		```bash
 		# Clone this repository
-		git clone https://github.com/meltedspark/electron-angular2-native
+		git clone https://github.com/meltedspark/electron-angular-native
 		# Go into the repository
-		cd electron-angular2-native
+		cd electron-angular-native
 		```  
 		
 3. Install and run  
 
-	* If you're behind a corporate firewall configure `npm` and `.typingsrc` proxy:  
+	* If you're behind a corporate firewall configure `npm` proxy:  
 		
 		```bash
 		npm config set proxy http://proxy.company.com:port  
 		npm config set https-proxy http://proxy.company.com:port
 		```
-		
-		Edit `.typingsrc` file:  
-	
-		```bash
-		proxy=http://proxy.company.com:port  
-		rejectUnauthorized=false
-		```
-	* Make sure you have `python v2.7` and appropriate `C\C++ compiler toolchain` installed:
+	* **EXTREMELY IMPORTANT**: Make sure you have `python v2.7` and appropriate `C\C++ compiler toolchain` installed:
 	
 		> You will also need to install:
 		> 
@@ -97,36 +90,38 @@ Plugins are loaded at runtime
 		npm install && npm start
 		```  
 		
+		`npm start` runs application in debug mode while watching the .ts files (hot reload)
+		
 ## To distribute
 
-The application is packaged using [electron-packager](https://github.com/electron-userland/electron-packager).  
- - Make sure you have installed [required system packages](https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build)
- - Run the following from the root folder to create a distribution for:
+ - Run the following from the root folder to create a distribution for:  
+  
+   - Current platform:
+    
+     ```bash
+     npm run dist
 	- Windows 32 bit:  
  
 		```bash
-		npm run dist:win32
-		```
+		npm run dist:windows:32
 	- Windows 64 bit:   
  
 		```bash
-		npm run dist:win64
-		```  
-	- Linux 32 bit:
+		npm run dist:windows:64
+	 - Linux 32 bit:
 	
 		```bash
-		npm run dist:linux32
-		```	
+		npm run dist:linux:32
 	- Linux 64 bit:
 	
 		```bash
-		npm run dist:linux64
-		```			
+		npm run dist:linux:64
 	- OSX:
 	
 		```bash
 		npm run dist:osx
-		```	
+ - Be aware that cross-platform builds are [performed](https://www.electron.build/multi-platform-build) on remote server
+ - Build artifact can be found in build-artifacts folder
 	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)

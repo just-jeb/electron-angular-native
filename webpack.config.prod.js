@@ -123,8 +123,8 @@ const postcssPlugins = function (loader) {
         ].concat(minimizeCss ? [cssnano(minimizeOptions)] : []);
     };
 
-const arch = process.env.ARCH;
-const platform = process.env.PLATFORM;
+const arch = process.env.ARCH || process.arch;
+const platform = process.env.PLATFORM || process.platform;
 
 module.exports = {
   externals: {
