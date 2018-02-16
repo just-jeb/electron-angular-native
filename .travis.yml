@@ -13,9 +13,9 @@ matrix:
 node_js:
   - 8
 
-#cache:
-#  directories:
-#    - node_modules
+cache:
+  directories:
+    - node_modules
 
 addons:
   apt:

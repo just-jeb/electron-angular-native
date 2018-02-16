@@ -177,13 +177,13 @@ module.exports = {
   },
   entry: {
     main: [
-      "./src\\main.ts"
+      "./src/main.ts"
     ],
     polyfills: [
-      "./src\\polyfills.ts"
+      "./src/polyfills.ts"
     ],
     styles: [
-      "./src\\styles.css"
+      "./src/styles.css"
     ]
   },
   output: {
@@ -231,7 +231,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.css$/,
         use: [
@@ -255,7 +255,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.scss$|\.sass$/,
         use: [
@@ -287,7 +287,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.less$/,
         use: [
@@ -317,7 +317,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.styl$/,
         use: [
@@ -348,7 +348,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.css$/,
         loaders: ExtractTextPlugin.extract({
@@ -374,7 +374,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.scss$|\.sass$/,
         loaders: ExtractTextPlugin.extract({
@@ -408,7 +408,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.less$/,
         loaders: ExtractTextPlugin.extract({
@@ -440,7 +440,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.styl$/,
         loaders: ExtractTextPlugin.extract({
@@ -540,7 +540,7 @@ module.exports = {
       cwd: projectRoot
     }),
     new HtmlWebpackPlugin({
-      template: "./src\\index.html",
+      template: "./src/index.html",
       filename: "./index.html",
       hash: false,
       inject: true,
@@ -608,7 +608,7 @@ module.exports = {
         "license.txt"
       ],
       perChunkOutput: false,
-      outputTemplate: path.join(process.cwd(), "node_modules\\license-webpack-plugin\\output.template.ejs"),
+      outputTemplate: path.join(process.cwd(), "node_modules/license-webpack-plugin/output.template.ejs"),
       outputFilename: "3rdpartylicenses.txt",
       suppressErrors: true,
       includePackagesWithoutLicense: false,
@@ -650,10 +650,10 @@ module.exports = {
       mainPath: "main.ts",
       platform: 0,
       hostReplacementPaths: {
-        "environments\\environment.ts": "environments\\environment.prod.ts"
+        "environments/environment.ts": "environments/environment.prod.ts"
       },
       sourceMap: false,
-      tsConfigPath: "src\\tsconfig.app.json",
+      tsConfigPath: "src/tsconfig.app.json",
       compilerOptions: {}
     })
   ],
