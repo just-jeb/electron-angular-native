@@ -1,6 +1,6 @@
 directories:
   output: build-artifacts
-  buildResources: build-resources
+  build: build
   app: dist
 productName: electron-angular-native
 win:
@@ -8,11 +8,10 @@ win:
   target:
     - portable
 mac:
-  icon: src/favicon.png
+  icon: src/favicon.icns
   target:
     - dmg
 linux:
-  icon: src
   target:
     - AppImage
 nodeGypRebuild: true
