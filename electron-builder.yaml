@@ -1,6 +1,6 @@
 directories:
   output: build-artifacts
-  build: build
+  buildResources: build-resources
   app: dist
 productName: electron-angular-native
 win:
