@@ -7,16 +7,14 @@ platform:
 cache:
   - node_modules
 
-# Install scripts. (runs after repo cloning)
 install:
-  # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node LTS $env:platform
-  # install modules
   - npm config set python python2.7
   - npm config set msvs_version 2015
   - npm install
 
-# Don't actually build.
-build:
+build: off
+
+test_script:
   - npm run dist
   - npm run e2e
