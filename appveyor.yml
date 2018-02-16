@@ -14,10 +14,10 @@ install:
   - ps: Install-Product node LTS $env:platform
   - npm config set python python2.7
   - npm config set msvs_version 2015
-  - ps: %BASH% -lc "npm install"
+  - ps: '%BASH% -lc "npm install"'
 
 build: off
 
 test_script:
-  - ps: %BASH% -lc "npm run dist"
-  - ps: %BASH% -lc "npm run e2e"
+  - ps: '%BASH% -lc "npm run dist"'
+  - ps: '%BASH% -lc "npm run e2e"'
