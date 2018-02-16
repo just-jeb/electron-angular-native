@@ -1,24 +1,26 @@
 sudo: required
 dist: trusty
 
-language: c
+language: node_js
 
 matrix:
   include:
     #- os: osx
     - os: linux
-      env: CC=clang CXX=clang++ npm_config_clang=1
-      compiler: clang
 
 node_js:
   - 8
+env:
+  - ELECTRON_CACHE=$HOME/.electron
+
+cache:
+  directories:
+    - $HOME/.electron
+    - node_modules
 
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
       - icnsutils
       - graphicsmagick
       - libgnome-keyring-dev
@@ -27,7 +29,6 @@ addons:
       - xvfb
 
 install:
-  - nvm install 8
   - npm install
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
