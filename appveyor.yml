@@ -1,5 +1,8 @@
 image: Visual Studio 2015
 
+environment:
+  BASH: C:/cygwin/bin/bash
+
 platform:
   - x86
   - x64
@@ -11,10 +14,10 @@ install:
   - ps: Install-Product node LTS $env:platform
   - npm config set python python2.7
   - npm config set msvs_version 2015
-  - npm install
+  - %BASH% -lc "npm install"
 
 build: off
 
 test_script:
-  - npm run dist
-  - npm run e2e
+  - %BASH% -lc "npm run dist"
+  - %BASH% -lc "npm run e2e"
