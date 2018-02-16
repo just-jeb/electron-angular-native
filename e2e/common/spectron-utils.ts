@@ -26,7 +26,7 @@ export class SpectronUtils {
   static describe(desc: string, describeFunction: (app: Application) => void) {
 
     describe(desc, function () {
-      this.timeout(10000);
+      this.timeout(20000);
 
       before(() => {
         return SpectronUtils.app.start();
