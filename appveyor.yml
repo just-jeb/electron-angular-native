@@ -12,7 +12,6 @@ cache:
 
 install:
   - ps: Install-Product node LTS $env:platform
-  - npm config set python python2.7
   - npm config set msvs_version 2015
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm install"'
 
