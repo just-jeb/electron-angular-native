@@ -39,5 +39,5 @@ before_script:
   - sleep 3
 
 script:
-  - travis_wait 20 npm run dist
+  - npm run dist
   - npm run e2e
