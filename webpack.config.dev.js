@@ -176,13 +176,13 @@ module.exports = {
   },
   entry: {
     main: [
-      "./src\\main.ts"
+      "./src/main.ts"
     ],
     polyfills: [
-      "./src\\polyfills.ts"
+      "./src/polyfills.ts"
     ],
     styles: [
-      "./src\\styles.css"
+      "./src/styles.css"
     ]
   },
   output: {
@@ -219,7 +219,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.css$/,
         use: [
@@ -243,7 +243,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.scss$|\.sass$/,
         use: [
@@ -275,7 +275,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.less$/,
         use: [
@@ -305,7 +305,7 @@ module.exports = {
       },
       {
         exclude: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.styl$/,
         use: [
@@ -336,7 +336,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.css$/,
         use: [
@@ -360,7 +360,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.scss$|\.sass$/,
         use: [
@@ -392,7 +392,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.less$/,
         use: [
@@ -422,7 +422,7 @@ module.exports = {
       },
       {
         include: [
-          path.join(process.cwd(), "src\\styles.css")
+          path.join(process.cwd(), "src/styles.css")
         ],
         test: /\.styl$/,
         use: [
@@ -513,7 +513,7 @@ module.exports = {
     }),
     new NamedLazyChunksWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src\\index.html",
+      template: "./src/index.html",
       filename: "./index.html",
       hash: false,
       inject: true,
@@ -579,10 +579,10 @@ module.exports = {
       mainPath: "main.ts",
       platform: 0,
       hostReplacementPaths: {
-        "environments\\environment.ts": "environments\\environment.ts"
+        "environments/environment.ts": "environments/environment.ts"
       },
       sourceMap: true,
-      tsConfigPath: "src\\tsconfig.app.json",
+      tsConfigPath: "src/tsconfig.app.json",
       skipCodeGeneration: true,
       compilerOptions: {}
     })
