@@ -19,7 +19,7 @@ export class SpectronUtils {
     // Your electron path can be any binary
     // i.e for OSX an example path could be '/Applications/MyApp.app/Contents/MacOS/MyApp'
     // But for the sake of the example we fetch it from our node_modules.
-    path: `build-artifacts/electron-angular-native 1.0.0.${platformToExtension[process.platform]}`,
+    path: `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`,
     args: [path.join(__dirname, '../..')],
   });
 
