@@ -22,7 +22,7 @@
     "dist": "npm run webpack:build:prod && npm run clean-build && npx electron-builder build",
     "dist:dev": "npm run webpack:build:dev && npm run clean-build && npx electron-builder build",
     "webpack:dev:watch": "webpack --watch --config=webpack.config.dev.js --output-path=serve/",
-    "clean-build": "rimraf build-artifacts build-resources build"
+    "clean-build": "rimraf build-artifacts build"
   },
   "main": "serve/main.electron.js",
   "private": true,
