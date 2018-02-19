@@ -1,10 +1,12 @@
-# electron-angular-native (version 2.0.0)
+# electron-angular-native (version 2.0.0) 
+Linux: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native) 
+Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
 
 Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application consists of list of strings, while each string is loaded from native module in a different way:
  - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
  - **[To be supported]** String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) directly
- - String provided by native library (dll) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
+ - String provided by native library (dll, so or dylib) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
 
 ## Features
 
@@ -20,7 +22,7 @@ The application consists of list of strings, while each string is loaded from na
 ## To Use
 
 1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
-   * **Node 9 is not supported yet** due to an issue in node-ffi  
+   * **Node 9 is not supported yet** due to a [node-ffi issue](https://github.com/node-ffi/node-ffi/issues/438) 
    * **bash command line is required (use git-bash for windows)**
 2. Clone the repository
 	* If you're behind a corporate firewall configure `git` proxy:  

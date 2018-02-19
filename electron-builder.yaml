@@ -9,7 +9,6 @@ win:
   target:
     - portable
 mac:
-  icon: src/favicon.icns
   target:
     - dmg
 linux:
