@@ -1,0 +1,30 @@
+sudo: required
+dist: trusty
+
+language: node_js
+
+matrix:
+  include:
+    #- os: osx
+    - os: linux
+
+node_js:
+  - 8
+env:
+  - ELECTRON_CACHE=$HOME/.electron
+
+cache:
+  directories:
+    - $HOME/.electron
+    - node_modules
+
+addons:
+  apt:
+    packages:
+      - icnsutils
+
+install:
+  - npm install
+
+script:
+  - npm run dist

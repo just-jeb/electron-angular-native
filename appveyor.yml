@@ -1,0 +1,18 @@
+image: Visual Studio 2015
+
+environment:
+  BASH: C:/cygwin/bin/bash
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node LTS $env:platform
+  - npm config set msvs_version 2015
+  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm install"'
+
+build: off
+
+test_script:
+  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist"'

@@ -8,11 +8,9 @@ win:
   target:
     - portable
 mac:
-  icon: src/favicon.png
   target:
     - dmg
 linux:
-  icon: src
   target:
     - AppImage
 nodeGypRebuild: true
