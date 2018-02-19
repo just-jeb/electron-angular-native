@@ -1,4 +1,6 @@
-# electron-angular-native (version 2.0.0)
+# electron-angular-native (version 2.0.0) 
+Linux: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native) 
+Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
 
 Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application consists of list of strings, while each string is loaded from native module in a different way:
