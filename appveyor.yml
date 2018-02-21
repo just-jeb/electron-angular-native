@@ -20,4 +20,3 @@ build: off
 test_script:
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist"'
   - npm run e2e
-  - ps: Get-Content -Path e2e/page.html

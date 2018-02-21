@@ -1,6 +1,7 @@
 import {SpectronUtils} from './common/spectron-utils';
 import {Application} from 'spectron';
 import * as path from 'path';
+import * as fs from 'fs';
 
 const chaiAsPromised = require('chai-as-promised');
 const chai = require('chai');
@@ -13,7 +14,7 @@ function containsString(app: Application, str: string) {
     () => {
       app.webContents.savePage(path.resolve(__dirname, 'page.html'), 'HTMLComplete')
         .then(function () {
-          console.log('page saved');
+          console.log(fs.readFileSync(path.resolve(__dirname, 'page.html'), 'utf8'));
         }).catch(function (error) {
         console.error('saving page failed', error.message)
       });
