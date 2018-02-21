@@ -1,5 +1,6 @@
 import {SpectronUtils} from './common/spectron-utils';
 import {Application} from 'spectron';
+import * as path from 'path';
 
 const chaiAsPromised = require('chai-as-promised');
 const chai = require('chai');
@@ -9,10 +10,18 @@ chai.use(chaiAsPromised);
 
 function containsString(app: Application, str: string) {
   it(`Contains ${str}`,
-    () => app.client.waitUntilWindowLoaded().getText('ul li h2').then(list => {
-      const index = list.indexOf(str);
-      return index > -1 ? list[index] : '';
-    }).should.eventually.equal(str)
+    () => {
+      app.webContents.savePage(path.resolve(__dirname, 'page.html'), 'HTMLComplete')
+        .then(function () {
+          console.log('page saved');
+        }).catch(function (error) {
+        console.error('saving page failed', error.message)
+      });
+    return app.client.waitUntilWindowLoaded().getText('ul li h2').then(list => {
+        const index = list.indexOf(str);
+        return index > -1 ? list[index] : '';
+      }).should.eventually.equal(str);
+    }
   );
 }
 
