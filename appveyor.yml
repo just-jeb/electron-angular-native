@@ -7,6 +7,9 @@ platform:
   - x86
   - x64
 
+cache:
+  - node_modules
+
 install:
   - ps: Install-Product node LTS $env:platform
   - npm config set msvs_version 2015
@@ -16,3 +19,4 @@ build: off
 
 test_script:
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist"'
+  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run e2e"'
