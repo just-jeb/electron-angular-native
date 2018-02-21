@@ -1,4 +1,4 @@
-image: Visual Studio 2015
+image: unstable
 
 environment:
   BASH: C:/cygwin/bin/bash
@@ -19,4 +19,4 @@ build: off
 
 test_script:
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist"'
-  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run e2e"'
+  - npm run e2e
