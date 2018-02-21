@@ -1,4 +1,4 @@
-image: unstable
+image: Visual Studio 2015
 
 environment:
   BASH: C:/cygwin/bin/bash
