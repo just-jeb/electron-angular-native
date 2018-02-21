@@ -17,7 +17,7 @@ const platformToExtension = {
 export class SpectronUtils {
   public static app = new SpectronApplication({
     path: `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`,
-    waitTimeout: 10000
+    waitTimeout: 60000
   });
 
   static describe(desc: string, describeFunction: (app: Application) => void) {
