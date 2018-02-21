@@ -1,6 +1,7 @@
-# electron-angular-native [![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native)
+# electron-angular-native [![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/blob/master/LICENSE.md)
 Linux: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native) 
 Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
+ [![GitHub issues](https://img.shields.io/github/issues/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/issues)
 
 Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application consists of list of strings, while each string is loaded from native module in a different way:
@@ -137,5 +138,3 @@ You can define application name, version author and runtime node dependecies in 
  - [Node.js module lookup mechanism with System.js](http://stackoverflow.com/questions/38747445/node-js-module-lookup-in-electronangular-2-typescript-application)
  - [Running binding.gyp in all subdirectories](http://stackoverflow.com/questions/38693619/node-gyp-run-binding-gyp-in-all-subdirectories)
  - [System.js plugin-node-binary](https://github.com/systemjs/plugin-node-binary)
-
-## License [Apache](LICENSE.md)
