@@ -1,8 +1,9 @@
-# electron-angular-native [![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/blob/master/LICENSE.md)
-Linux: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native) 
-Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
- [![GitHub issues](https://img.shields.io/github/issues/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/issues)
+<a href="https://electronjs.org/"><img src="https://camo.githubusercontent.com/627c774e3070482b180c3abd858ef2145d46303b/68747470733a2f2f656c656374726f6e6a732e6f72672f696d616765732f656c656374726f6e2d6c6f676f2e737667" alt="Electron" height="50px"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/electron/spectron"><img src="https://cloud.githubusercontent.com/assets/378023/15063284/cf544f2c-1383-11e6-9336-e13bd64b1694.png" alt="Electron" height="50px"/></a>&nbsp;&nbsp;
+<a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" width="50px"/></a>&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/blob/master/LICENSE.md)
 
+**Linux**: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
+ 
 Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application consists of list of strings, while each string is loaded from native module in a different way:
  - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
@@ -12,6 +13,7 @@ The application consists of list of strings, while each string is loaded from na
 ## Features
 
  - [Electron](http://electron.atom.io/) 1.8.2
+ - [Spectron](https://github.com/electron/spectron) 3.8.0
  - [Angular](https://angular.io/) 5.2
  - [Angular CLI](https://cli.angular.io/) 1.6.8
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
