@@ -17,13 +17,12 @@ const platformToExtension = {
 export class SpectronUtils {
   public static app = new SpectronApplication({
     path: `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`,
-    waitTimeout: 60000
   });
 
   static describe(desc: string, describeFunction: (app: Application) => void) {
 
     describe(desc, function () {
-      this.timeout(20000);
+      this.timeout(10000);
 
       before(() => {
         return SpectronUtils.app.start();
