@@ -3,20 +3,22 @@ image: Visual Studio 2015
 environment:
   BASH: C:/cygwin/bin/bash
 
-platform:
-  - x86
-  - x64
+  matrix:
+    - node_platform: x86
+      dist_platform: 32
+    - node_platform: x64
+      dist_platform: 64
 
 cache:
   - node_modules
 
 install:
-  - ps: Install-Product node LTS $env:platform
+  - ps: Install-Product node LTS $env:node_platform
   - npm config set msvs_version 2015
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm install"'
 
 build: off
 
 test_script:
-  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist"'
+  - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm run dist:windows:$dist_platform"'
   - npm run e2e
