@@ -12,7 +12,7 @@ OS = $(shell uname)
 NATIVE_ARTIFACTS_DIR = ../../../native-artifacts/precompiled-library
 
 ifeq ($(OS),Darwin)
-	OS = mac
+	OS = darwin
 	LDFLAGS_BASE += -dynamiclib
 	simple_library = $(simple_library_name).dylib
 else
