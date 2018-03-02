@@ -10,17 +10,14 @@ chai.use(chaiAsPromised);
 const platformToExtension = {
   'win32': 'exe',
   'linux': 'AppImage',
-  'darwin': 'app'
+  'darwin': 'app/Contents/MacOS/Electron'
 };
 
-const path = process.platform === 'darwin' ? '/usr/bin/open' :
-  `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
-const args = process.platform === 'darwin' ? ['-a ElectronAngularNativeApp'] : undefined;
+const path = `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
 
 export class SpectronUtils {
   public static app = new SpectronApplication({
-    path,
-    args
+    path: path,
   });
 
   static describe(desc: string, describeFunction: (app: Application) => void) {
