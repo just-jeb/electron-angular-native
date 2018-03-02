@@ -2,16 +2,17 @@ directories:
   output: build-artifacts
   buildResources: build-resources
   app: dist
-productName: ElectronAngularNativeApp
-artifactName: ${productName}.${ext}
+productName: electron-angular-native
+artifactName: ${name}.${ext}
 win:
   icon: src/favicon.png
   target:
     - portable
 mac:
   target:
-    - dmg:
-        title: ${productName}
+    - dmg
+dmg:
+  title: ${productName}
 linux:
   target:
     - AppImage
