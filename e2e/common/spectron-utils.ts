@@ -1,5 +1,4 @@
 import {Application} from 'spectron';
-import * as path from 'path';
 
 const SpectronApplication = require('spectron').Application;
 const chaiAsPromised = require('chai-as-promised');
@@ -14,9 +13,13 @@ const platformToExtension = {
   'darwin': 'app'
 };
 
+const path = process.platform === 'darwin' ? 'open' : `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
+const args = process.platform === 'darwin' ? ['-a ElectronAngularNativeApp'] : undefined;
+
 export class SpectronUtils {
   public static app = new SpectronApplication({
-    path: `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`,
+    path,
+    args
   });
 
   static describe(desc: string, describeFunction: (app: Application) => void) {
