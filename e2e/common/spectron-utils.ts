@@ -13,7 +13,8 @@ const platformToExtension = {
   'darwin': 'app'
 };
 
-let path = process.platform === 'darwin' ? '/usr/bin/open' : `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
+const path = process.platform === 'darwin' ? '/usr/bin/open' :
+  `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
 const args = process.platform === 'darwin' ? ['-a ElectronAngularNativeApp'] : undefined;
 
 export class SpectronUtils {
