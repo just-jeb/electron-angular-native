@@ -11,7 +11,7 @@ chai.use(chaiAsPromised);
 const platformToExtension = {
   'win32': 'exe',
   'linux': 'AppImage',
-  'darwin': 'dmg'
+  'darwin': 'app'
 };
 
 export class SpectronUtils {

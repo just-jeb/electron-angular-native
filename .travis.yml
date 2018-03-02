@@ -40,4 +40,5 @@ before_script:
 
 script:
   - npm run dist
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo hdiutil attach ./build-artifacts/ElectronAngularNativeApp.dmg; sudo cp -R /Volumes/ElectronAngularNativeApp/ElectronAngularNativeApp.app ./build-artifacts/ fi
   - npm run e2e
