@@ -10,7 +10,7 @@ chai.use(chaiAsPromised);
 const platformToExtension = {
   'win32': 'exe',
   'linux': 'AppImage',
-  'darwin': 'app/Contents/MacOS/Electron'
+  'darwin': 'app/Contents/MacOS/electron-angular-native'
 };
 
 const path = `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`;
