@@ -11,7 +11,7 @@ chai.use(chaiAsPromised);
 const pathToApp = {
   'win32': `build-artifacts/${appName}.exe`,
   'linux': `build-artifacts/${appName}.AppImage`,
-  'darwin': `/Applications/${appName}.app/Contents/MacOS/${appName}`
+  'darwin': `/Volumes/${appName}/${appName}.app/Contents/MacOS/${appName}`
 };
 
 const path = pathToApp[process.platform];
