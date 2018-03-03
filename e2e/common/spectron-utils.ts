@@ -1,22 +1,24 @@
 import {Application} from 'spectron';
-import * as path from 'path';
 
 const SpectronApplication = require('spectron').Application;
 const chaiAsPromised = require('chai-as-promised');
 const chai = require('chai');
+const appName = require('../../app.package.json').name;
 
 chai.should();
 chai.use(chaiAsPromised);
 
-const platformToExtension = {
-  'win32': 'exe',
-  'linux': 'AppImage',
-  'darwin': 'dmg'
+const pathToApp = {
+  'win32': `build-artifacts/${appName}.exe`,
+  'linux': `build-artifacts/${appName}.AppImage`,
+  'darwin': `/Volumes/${appName}/${appName}.app/Contents/MacOS/${appName}`
 };
+
+const path = pathToApp[process.platform];
 
 export class SpectronUtils {
   public static app = new SpectronApplication({
-    path: `build-artifacts/ElectronAngularNativeApp.${platformToExtension[process.platform]}`,
+    path: path,
   });
 
   static describe(desc: string, describeFunction: (app: Application) => void) {
