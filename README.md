@@ -2,7 +2,7 @@
 <a href="https://github.com/electron/spectron"><img src="https://cloud.githubusercontent.com/assets/378023/15063284/cf544f2c-1383-11e6-9336-e13bd64b1694.png" alt="Electron" height="50px"/></a>&nbsp;&nbsp;
 <a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" width="50px"/></a>&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/blob/master/LICENSE.md)
 
-**Linux**: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
+**Linux/Mac**: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
  
 Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
 The application consists of list of strings, while each string is loaded from native module in a different way:
@@ -132,7 +132,7 @@ The application consists of list of strings, while each string is loaded from na
  - Build artifact can be found in build-artifacts folder
  
 ## Application info
-You can define application name, version author and runtime node dependecies in `app.package.js`
+You can define application name, version author and runtime node dependencies in `app.package.js`
 	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)
