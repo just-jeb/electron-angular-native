@@ -1,20 +1,25 @@
 {
   "targets": [
     {
-      "target_name": "string-provider",
-      "sources": [ "StringProvider.cpp" ],
-      "include_dirs" : [
-          "<!(node -e \"require('nan')\")"
+      "target_name": "link-provider",
+      "sources": [
+        "LinkProvider.cpp"
+      ],
+      "include_dirs": [
+        "<!(node -e \"require('nan')\")"
       ]
     },
-
-	{
+    {
       "target_name": "action_after_build",
       "type": "none",
-      "dependencies": ["string-provider"],
+      "dependencies": [
+        "link-provider"
+      ],
       "copies": [
         {
-          "files": [ "<(PRODUCT_DIR)/string-provider.node" ],
+          "files": [
+            "<(PRODUCT_DIR)/link-provider.node"
+          ],
           "destination": "../../../native-artifacts/native-addons"
         }
       ]

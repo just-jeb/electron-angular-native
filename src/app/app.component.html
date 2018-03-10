@@ -7,7 +7,7 @@
 <h2>Natively loaded strings: </h2>
 <ul>
   <li *ngFor="let provider of linkProviders">
-    <h2>{{provider.getLink()}}</h2>
+    <h2><a [href]="provider.getLink()">{{provider.getTitle()}}</a></h2>
   </li>
 </ul>
 

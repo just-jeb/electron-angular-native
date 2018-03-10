@@ -5,13 +5,18 @@ import * as path from 'path';
 
 @Injectable()
 export class PrecompiledLibraryLinkService implements LinkProvider {
+
   lib;
 
   constructor() {
-    this.lib = new Library(path.resolve(__dirname, 'native-artifacts/precompiled-libraries/simplelib'), {'getString': [types.CString, []]});
+    this.lib = new Library(path.resolve(__dirname, 'native-artifacts/precompiled-libraries/simplelib'), {'getLink': [types.CString, []]});
+  }
+
+  getTitle() {
+    return 'The provided by precompiled native library (using ffi)';
   }
 
   getLink(): string {
-    return this.lib.getString();
+    return this.lib.getLink();
   }
 }

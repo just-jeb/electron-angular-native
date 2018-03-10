@@ -4,11 +4,15 @@
 
 **Linux/Mac**: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master)
  
-Easy to use, ready for distribution boilerplate for Electron applications which use Angular along with native modules (node.js addons and regular native libraries).  
-The application consists of list of strings, while each string is loaded from native module in a different way:
- - String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) via proxy JS class
- - **[To be supported]** String provided by [native node.js addon](https://nodejs.org/api/addons.html) (.node) directly
- - String provided by native library (dll, so or dylib) via proxy JS class using [node-ffi](https://github.com/node-ffi/node-ffi)  
+Easy to use, ready for distribution boilerplate for Electron Angular applications supporting native code.  
+Native code is supported in two different ways:
+ - [native node.js addon](https://nodejs.org/api/addons.html) (.node) using [nan](https://github.com/nodejs/nan).  
+   This is useful when you own the code and you want it to be part of the build.  
+   In this case the native source code is part of your application code base and compiled with [node-gyp](https://github.com/nodejs/node-gyp).
+ - Native library (.dll, .so or .dylib) using [node-ffi](https://github.com/node-ffi/node-ffi).  
+   This is useful when you don't own the code of the native library or, alternatively, have another project which already compiles to a native library 
+   and you want to utilize this library in your Electron application.  
+   In this case you supply precompiled libraries and use them via Foreign Function Interface (**node-ffi**)
 
 ## Features
 
@@ -18,7 +22,7 @@ The application consists of list of strings, while each string is loaded from na
  - [Angular CLI](https://cli.angular.io/) 1.6.8
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
  - [Typescript](https://www.typescriptlang.org/) 2.5.3
- - **[To be supported]** Native node.js addons (using [nan](https://github.com/nodejs/nan))
+ - Native node.js addons (using [nan](https://github.com/nodejs/nan))
  - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
  - Hot reload for development
 
