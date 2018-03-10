@@ -1,16 +1,12 @@
 #include <nan.h>
 
-namespace NextGenPoc {
-
 void Method(const Nan::FunctionCallbackInfo<v8::Value>& info) {
-  info.GetReturnValue().Set(Nan::New("c++ .node string").ToLocalChecked());
+  info.GetReturnValue().Set(Nan::New("https://github.com/nodejs/nan").ToLocalChecked());
 }
 
 void Init(v8::Local<v8::Object> exports) {
-  exports->Set(Nan::New("getString").ToLocalChecked(),
+  exports->Set(Nan::New("getLink").ToLocalChecked(),
                Nan::New<v8::FunctionTemplate>(Method)->GetFunction());
 }
 
 NODE_MODULE(StringProvider, Init)
-
-}  // namespace NextGenPoc

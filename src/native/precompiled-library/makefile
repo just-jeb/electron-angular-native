@@ -1,5 +1,5 @@
 simple_library_name = simplelib
-simple_library_objects = StringProvider.o
+simple_library_objects = LinkProvider.o
 
 INCLUDES = \
 

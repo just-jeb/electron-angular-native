@@ -5,12 +5,12 @@
 #endif
 
 #ifdef __cplusplus
-extern "C" 
+extern "C"
 {
 #endif
-	LIB_EXPORT char const* getString() 
+	LIB_EXPORT char const* getLink()
 	{
-    return "c++ precompiled library string";
+    return "https://github.com/node-ffi/node-ffi";
 	}
 #ifdef __cplusplus
 }

@@ -1,7 +1,5 @@
 import {SpectronUtils} from './common/spectron-utils';
 import {Application} from 'spectron';
-import * as path from 'path';
-import * as fs from 'fs';
 
 const chaiAsPromised = require('chai-as-promised');
 const chai = require('chai');
