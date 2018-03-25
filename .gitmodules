@@ -1,0 +1,3 @@
+[submodule "native-artifacts/precompiled-libraries"]
+	path = native-artifacts/precompiled-libraries
+	url = https://github.com/meltedspark/electron-angular-native-simplelib-bin.git
