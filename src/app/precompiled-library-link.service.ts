@@ -13,7 +13,7 @@ export class PrecompiledLibraryLinkService implements LinkProvider {
   }
 
   getTitle() {
-    return 'Provided by precompiled native library (using ffi)';
+    return 'The link is provided by precompiled native library (using ffi)';
   }
 
   getLink(): string {
