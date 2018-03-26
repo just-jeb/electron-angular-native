@@ -6,7 +6,7 @@ const nativeAddon = require('../../native-artifacts/native-addons/link-provider.
 @Injectable()
 export class NodeAddonLinkService implements LinkProvider {
   getTitle() {
-    return 'The link provided by Node addon (using nan)';
+    return 'The link is provided by Node addon (using nan)';
   }
   getLink(): string {
     return nativeAddon.getLink();
