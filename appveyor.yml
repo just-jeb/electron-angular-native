@@ -13,6 +13,7 @@ cache:
   - node_modules
 
 install:
+  - git submodule update --init --recursive
   - ps: Install-Product node LTS $env:node_platform
   - npm config set msvs_version 2015
   - '%BASH% -lc "cd $APPVEYOR_BUILD_FOLDER && npm install"'
