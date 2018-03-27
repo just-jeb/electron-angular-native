@@ -42,7 +42,10 @@ Native code is supported in two different ways:
 
 		```bash
 		# Clone this repository
-		git clone https://github.com/meltedspark/electron-angular-native
+		# git > 2.13
+		git clone --recurse-submodules https://github.com/meltedspark/electron-angular-native
+		# git <= 2.12
+		git clone --recursive https://github.com/meltedspark/electron-angular-native
 		# Go into the repository
 		cd electron-angular-native
 		```  
