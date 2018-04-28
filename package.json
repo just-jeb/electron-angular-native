@@ -2,6 +2,19 @@
   "name": "electron-angular-native",
   "version": "2.0.1",
   "license": "Apache 2.0",
+  "author": "Evgeny Barabanov",
+  "engines": {
+    "node": ">=8.9.1"
+  },
+  "keywords": [
+    "electron",
+    "native",
+    "angular",
+    "typescript",
+    "boilerplate",
+    "node",
+    "addon"
+  ],
   "scripts": {
     "postinstall": "npm run compile:native",
     "ng": "ng",

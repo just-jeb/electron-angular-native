@@ -6,6 +6,9 @@
 /tmp
 /out-tsc
 /serve
+/build
+/build-artifacts
+/native-artifacts/native-addons
 main.electron.js
 
 # dependencies
