@@ -17,7 +17,7 @@ function containsString(app: Application, text: string, url: string) {
   });
 }
 
-SpectronUtils.describe('Native strings', app => {
+SpectronUtils.describe('Native links', app => {
   containsString(app, 'The link is provided by Node addon (using nan)', 'https://github.com/nodejs/nan');
   containsString(app, 'The link is provided by precompiled native library (using ffi)', 'https://github.com/node-ffi/node-ffi');
 });
