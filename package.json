@@ -41,7 +41,6 @@
     "clean-build": "rimraf build-artifacts build"
   },
   "main": "serve/main.electron.js",
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
