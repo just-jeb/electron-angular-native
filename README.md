@@ -26,9 +26,9 @@ Native code is supported in two different ways:
  - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
  - Hot reload for development
 
-## To Use
+## Getting ready
 
-1. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
+1. In order to clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
    * **Node 9 is not supported yet** due to a [node-ffi issue](https://github.com/node-ffi/node-ffi/issues/438) 
    * **bash command line is required (use git-bash for windows)**
 2. Clone the repository
@@ -50,7 +50,7 @@ Native code is supported in two different ways:
 		cd electron-angular-native
 		```  
 		
-3. Install and run  
+3. Prepare the environment  
 
 	* If you're behind a corporate firewall configure `npm` proxy:  
 		
@@ -99,13 +99,73 @@ Native code is supported in two different ways:
 	* From your bash (git-bash or similar) command line:  
 		
 		```bash
-		# Install dependencies and run the app
-		npm install && npm start
+		# Install dependencies
+		npm install
 		```  
 		
-		`npm start` runs application in debug mode while watching the .ts files (hot reload)
-		
-## To distribute
+## Application structure
+
+ - All the source code resides in `src/` directory
+ - All the native source code resides in `src/native/` directory (a new native source code shall be put there as well)
+ - Precompiled binaries (`simplelib`) are fetched from [another git repository](https://github.com/meltedspark/electron-angular-native-simplelib-bin) as git submodule and can be found in `native-artifacts/precompiled-libraries` directory.  
+   If you have any precompiled binaries you'd like to use in your project just put them inside this directory, while keeping platform and architecture subdirectories same to the `simplelib`.
+ - Native artifacts that were compiled from the source code as part of the build can be found in `native-artifacts/native-addons` directory (first time compiled on `npm install`)
+  
+## Application info
+You can define application name, version, author and runtime node dependencies in `app.package.js`  
+
+## Development
+
+- **Running application in debug mode:**
+
+	```bash
+	npm start
+	```
+  
+	This will run your Electron Angular application in watch mode, i.e. if you change any `.ts` file the application will reload the changes automatically.  
+	The application starts with debug tools open so that you can place breakpoints and debug your Typescript code.  
+	
+	**Note** *that first time you run `npm start` the application might open with console error saying "Not allowed to load local resource: file:///.../electron-angular-native/serve/index.html".  
+	The reason for that is that webpack compilation and electron serve run simultaneously and the application starts before the code is ready.  
+	All you need to do is wait - once the compilation is complete the application will reload with the compiled code.*
+	
+- **Compiling native code:** 
+
+	Native code is not compiled on every `npm start` (it's only compiled on `npm install` and before the distribution), but if you want to recompile it, run the following command from your *bash* command line:  
+
+	```bash
+	npm run compile:native
+	```
+
+- **Running end to end tests with Spectron:**  
+
+	To run end to end tests use the following command:
+	
+	```bash
+	npm run e2e
+	``` 
+	This will run all the tests in `e2e` directory (the tests extension must be `.e2e-spec.ts`).  
+	For your convenience there is a helper class `SpectronUtils` which can be used for tests definition and two test examples:
+	
+	 - `native-links.e2e-spec.ts` verifies that the links that loaded from native modules present upon the application start
+	 - `sanity.e2e-spec.ts` verifies that the application starts
+	
+- **AoT build:**  
+
+  Sometimes you want to make sure your code compiles with AoT compiler during the development.  
+  In order to do that use the following command:  
+  
+  ```bash
+  npm run build
+  ```
+  
+  If you want to *run* the application in product mode (built with AoT) use this:
+  
+  ```bash
+  npm run start:prod
+  ```
+  
+## Distribution
 
  - Run the following from the root folder to create a distribution for:  
   
@@ -138,12 +198,7 @@ Native code is supported in two different ways:
    If for some reason you want it in dev mode (JIT), run `npm run dist:dev` 
  - Build artifact can be found in build-artifacts folder
  
-## Application info
-You can define application name, version author and runtime node dependencies in `app.package.js`
-	
 ## Useful links
  - [Electron documentation](http://electron.atom.io/docs/latest)
  - [Using native modules in Electron](https://github.com/electron/electron/blob/master/docs/tutorial/using-native-node-modules.md)
- - [Node.js module lookup mechanism with System.js](http://stackoverflow.com/questions/38747445/node-js-module-lookup-in-electronangular-2-typescript-application)
  - [Running binding.gyp in all subdirectories](http://stackoverflow.com/questions/38693619/node-gyp-run-binding-gyp-in-all-subdirectories)
- - [System.js plugin-node-binary](https://github.com/systemjs/plugin-node-binary)
