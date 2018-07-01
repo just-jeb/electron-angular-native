@@ -1,10 +1,15 @@
 {
-  "$schema": "./node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "$schema": "@angular-devkit/architect/src/builders-schema.json",
   "builders": {
-    "custom-webpack": {
-      "class": "./src/custom-webpack",
-      "schema": "./src/custom-webpack/schema.json",
-      "description": "Build a server app and a browser app, then render the index.html and use it for the browser output."
+    "custom-webpack-browser": {
+      "class": "./src/custom-webpack-browser",
+      "schema": "./src/custom-webpack-browser/schema.json",
+      "description": "Build browser app extended with custom webpack config"
+    },
+    "custom-webpack/server": {
+      "class": "./src/custom-webpack/server",
+      "schema": "./src/custom-webpack/server/schema.json",
+      "description": "Build server app extended with custom webpack config"
     }
   }
 }

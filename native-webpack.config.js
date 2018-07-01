@@ -39,35 +39,35 @@ module.exports = {
     ]
   },
   plugins: [
-    // new CopyWebpackPlugin([
-    //   {
-    //     context: '.',
-    //     from: 'app.package.json',
-    //     to: 'package.json'
-    //   },
-    //   {
-    //     context: "native-artifacts/precompiled-libraries/" + arch + "/" + platform,
-    //     to: "native-artifacts/precompiled-libraries",
-    //     from: {
-    //       glob: "*",
-    //       dot: true
-    //     }
-    //   },
-    //   {
-    //     context: ".",
-    //     to: "",
-    //     from: {
-    //       glob: "native-artifacts/native-addons/*.node",
-    //       dot: true
-    //     }
-    //   }
-    // ], {
-    //   ignore: [
-    //     ".gitkeep",
-    //     "**/.DS_Store",
-    //     "**/Thumbs.db"
-    //   ],
-    //   debug: "warning"
-    // })
+    new CopyWebpackPlugin([
+      {
+        context: '.',
+        from: 'app.package.json',
+        to: 'package.json'
+      },
+      {
+        context: "native-artifacts/precompiled-libraries/" + arch + "/" + platform,
+        to: "native-artifacts/precompiled-libraries",
+        from: {
+          glob: "*",
+          dot: true
+        }
+      },
+      {
+        context: ".",
+        to: "",
+        from: {
+          glob: "native-artifacts/native-addons/*.node",
+          dot: true
+        }
+      }
+    ], {
+      ignore: [
+        ".gitkeep",
+        "**/.DS_Store",
+        "**/Thumbs.db"
+      ],
+      debug: "warning"
+    })
 ]
 };
