@@ -2,7 +2,7 @@
   "name": "angular-builders",
   "version": "0.0.1",
   "description": "Marble testing helpers library for RxJs and Jest",
-  "main": "umd/angular-builders.js",
+  "main": "lib",
   "module": "lib/index.js",
   "es2015": "lib-esm/index.js",
   "typings": "typings/index.d.ts",

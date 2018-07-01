@@ -11,8 +11,9 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "./custom-builders:custom-webpack",
+          "builder": "angular-builders:custom-webpack-browser",
           "options": {
+            "webpackConfigPath": "./native-webpack.config.js",
             "outputPath": "dist/electron-angular-native",
             "index": "src/index.html",
             "main": "src/main.ts",

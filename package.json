@@ -40,8 +40,7 @@
     "dist:dev": "npm run webpack:build:dev && npm run clean-build && npx electron-builder build",
     "webpack:dev:watch": "ng build --watch --output-path=serve/",
     "clean-build": "rimraf build-artifacts build",
-    "serve-electron": "electron . --serve",
-    "ng-build": "ng build %NODE_DEBUG_OPTION%"
+    "serve-electron": "electron . --serve"
   },
   "dependencies": {
     "@angular/animations": "^6.0.3",
@@ -68,6 +67,7 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "angular-builders": "file:custom-builders",
     "codelyzer": "~4.2.1",
     "concurrently": "^3.6.0",
     "cpy-cli": "^2.0.0",
