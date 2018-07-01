@@ -3,7 +3,7 @@
   "builders": {
     "custom-webpack": {
       "class": "./src/custom-webpack",
-      "schema": "./node_modules/@angular-devkit/build-angular/src/browser/schema.json",
+      "schema": "./src/custom-webpack/schema.json",
       "description": "Build a server app and a browser app, then render the index.html and use it for the browser output."
     }
   }
