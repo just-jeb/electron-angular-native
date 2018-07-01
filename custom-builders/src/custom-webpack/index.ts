@@ -9,19 +9,14 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {
-  BuildEvent,
-  Builder,
-  BuilderConfiguration,
-  BuilderContext,
-} from '@angular-devkit/architect';
-import { LoggingCallback, WebpackBuilder } from '@angular-devkit/build-webpack';
-import { Path, getSystemPath, normalize, resolve, virtualFs } from '@angular-devkit/core';
+import {Builder, BuilderConfiguration, BuilderContext, BuildEvent,} from '@angular-devkit/architect';
+import {LoggingCallback, WebpackBuilder} from '@angular-devkit/build-webpack';
+import {getSystemPath, normalize, Path, resolve, virtualFs} from '@angular-devkit/core';
 import * as fs from 'fs';
-import { Observable, concat, of, throwError } from 'rxjs';
-import { concatMap, last, tap } from 'rxjs/operators';
+import {concat, Observable, of, throwError} from 'rxjs';
+import {concatMap, last, tap} from 'rxjs/operators';
 import * as ts from 'typescript'; // tslint:disable-line:no-implicit-dependencies
-import { WebpackConfigOptions } from '@angular-devkit/build-angular/src/angular-cli-files/models/build-options';
+import {WebpackConfigOptions} from '@angular-devkit/build-angular/src/angular-cli-files/models/build-options';
 import {
   getAotConfig,
   getBrowserConfig,
@@ -30,16 +25,17 @@ import {
   getStatsConfig,
   getStylesConfig,
 } from '@angular-devkit/build-angular/src//angular-cli-files/models/webpack-configs';
-import { readTsconfig } from '@angular-devkit/build-angular/src/angular-cli-files/utilities/read-tsconfig';
-import { requireProjectModule } from '@angular-devkit/build-angular/src/angular-cli-files/utilities/require-project-module';
-import { augmentAppWithServiceWorker } from '@angular-devkit/build-angular/src/angular-cli-files/utilities/service-worker';
+import {readTsconfig} from '@angular-devkit/build-angular/src/angular-cli-files/utilities/read-tsconfig';
+import {requireProjectModule} from '@angular-devkit/build-angular/src/angular-cli-files/utilities/require-project-module';
+import {augmentAppWithServiceWorker} from '@angular-devkit/build-angular/src/angular-cli-files/utilities/service-worker';
 import {
   statsErrorsToString,
   statsToString,
   statsWarningsToString,
 } from '@angular-devkit/build-angular/src/angular-cli-files/utilities/stats';
-import { addFileReplacements, normalizeAssetPatterns } from '@angular-devkit/build-angular/src/utils';
-import { AssetPatternObject, BrowserBuilderSchema, CurrentFileReplacement } from '@angular-devkit/build-angular/src/browser/schema';
+import {addFileReplacements, normalizeAssetPatterns} from '@angular-devkit/build-angular/src/utils';
+import {AssetPatternObject, BrowserBuilderSchema, CurrentFileReplacement} from '@angular-devkit/build-angular/src/browser/schema';
+
 const webpackMerge = require('webpack-merge');
 
 
@@ -58,6 +54,7 @@ export class BrowserBuilder implements Builder<BrowserBuilderSchema> {
   constructor(public context: BuilderContext) { }
 
   run(builderConfig: BuilderConfiguration<BrowserBuilderSchema>): Observable<BuildEvent> {
+    console.log('Hi');
     const options = builderConfig.options;
     const root = this.context.workspace.root;
     const projectRoot = resolve(root, builderConfig.root);
@@ -146,6 +143,7 @@ export class BrowserBuilder implements Builder<BrowserBuilderSchema> {
       getBrowserConfig(wco),
       getStylesConfig(wco),
       getStatsConfig(wco),
+      require(`${wco.root}/webpack.config.js`)
     ];
 
     if (wco.buildOptions.main || wco.buildOptions.polyfills) {
