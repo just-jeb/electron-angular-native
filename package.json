@@ -55,6 +55,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "electron": "^2.0.3",
+    "ffi": "^2.2.0",
     "ngx-electron": "^1.0.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
