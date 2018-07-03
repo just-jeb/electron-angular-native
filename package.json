@@ -18,29 +18,37 @@
   ],
   "scripts": {
     "postinstall": "npm run compile:native",
+
     "ng": "ng",
     "test": "karma start ./karma.conf.js",
-    "start": "npm run serve",
-    "start:prod": "npm run build && electron . --dist",
-    "build": "npm run webpack:build:prod",
     "lint": "ng lint",
     "e2e": "cross-env TS_NODE_PROJECT=e2e/tsconfig.e2e.json mocha -r ts-node/register e2e/**/*.e2e-spec.ts",
-    "compile:native": "electron-rebuild && rimraf build bin",
-    "compile:main:serve": "tsc src/main.electron.ts --outDir serve",
-    "compile:main:dist": "tsc src/main.electron.ts --outDir dist",
-    "serve": "rimraf serve && npm run compile:main:serve && concurrently \"npm run webpack:dev:watch\" \"electron . --serve\"",
-    "webpack:build:prod": "ng build --prod --output-path=dist/ && npm run compile:main:dist",
-    "webpack:build:dev": "rimraf dist && npm run compile:main:dist && ng build --output-path=dist/",
-    "dist:windows:32": "cross-env ARCH=ia32 PLATFORM=win32 npm run webpack:build:prod && npm run clean-build && npx electron-builder build --windows --ia32",
-    "dist:windows:64": "cross-env ARCH=x64 PLATFORM=win32 npm run webpack:build:prod && npm run clean-build && npx electron-builder build --windows --x64",
-    "dist:linux:32": "cross-env ARCH=ia32 PLATFORM=linux npm run webpack:build:prod && npm run clean-build && npx electron-builder build --linux --ia32",
-    "dist:linux:64": "cross-env ARCH=x64 PLATFORM=linux npm run webpack:build:prod && npm run clean-build && npx electron-builder build --linux --x64",
-    "dist:osx": "cross-env ARCH=x64 PLATFORM=mac npm run webpack:build:prod && npm run clean-build && npx electron-builder build --mac",
-    "dist": "npm run webpack:build:prod && npm run clean-build && npx electron-builder build",
-    "dist:dev": "npm run webpack:build:dev && npm run clean-build && npx electron-builder build",
-    "webpack:dev:watch": "ng build --watch --output-path=serve/",
-    "clean-build": "rimraf build-artifacts build",
-    "serve-electron": "electron . --serve"
+
+    "start": "rimraf serve && npm run electron:build:serve && concurrently \"npm run ng:watch:dev\" \"electron . --serve\"",
+    "start:prod": "rimraf serve && npm run electron:build:serve && concurrently \"npm run ng:watch:prod\" \"electron . --serve\"",
+
+    "build": "npm run ng:build:prod && npm run electron:build:dist",
+    "build:dev": "npm run ng:build:dev && npm run electron:build:dist",
+
+    "electron:build:native": "electron-rebuild && rimraf build bin",
+    "electron:build:serve": "tsc src/main.electron.ts --types --outDir serve",
+    "electron:build:dist": "tsc src/main.electron.ts --types --outDir dist",
+
+    "ng:build:prod": "ng build --prod --output-path=dist/",
+    "ng:build:dev": "ng build --output-path=dist/",
+
+    "ng:watch:prod": "ng build --prod --watch --delete-output-path=false --output-path=serve/",
+    "ng:watch:dev": "ng build --watch --delete-output-path=false --output-path=serve/",
+
+    "dist": "npm run build && npm run clean-build && npx electron-builder build",
+    "dist:dev": "npm run build:dev && npm run clean-build && npx electron-builder build",
+    "dist:windows:32": "cross-env ARCH=ia32 PLATFORM=win32 npm run build && npm run clean-build && npx electron-builder build --windows --ia32",
+    "dist:windows:64": "cross-env ARCH=x64 PLATFORM=win32 npm run build && npm run clean-build && npx electron-builder build --windows --x64",
+    "dist:linux:32": "cross-env ARCH=ia32 PLATFORM=linux npm run build && npm run clean-build && npx electron-builder build --linux --ia32",
+    "dist:linux:64": "cross-env ARCH=x64 PLATFORM=linux npm run build && npm run clean-build && npx electron-builder build --linux --x64",
+    "dist:osx": "cross-env ARCH=x64 PLATFORM=mac npm run build && npm run clean-build && npx electron-builder build --mac",
+
+    "clean-build": "rimraf build-artifacts build"
   },
   "dependencies": {
     "@angular/animations": "^6.0.3",
