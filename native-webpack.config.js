@@ -3,8 +3,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const arch = process.env.ARCH || process.arch;
 const platform = process.env.PLATFORM || process.platform;
 
-console.log(arch, platform);
-
 module.exports = {
   externals: {
     electron: "require('electron')",

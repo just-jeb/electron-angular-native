@@ -16,12 +16,12 @@ Native code is supported in two different ways:
 
 ## Features
 
- - [Electron](http://electron.atom.io/) 1.8.2
+ - [Electron](http://electron.atom.io/) 2.0.3
  - [Spectron](https://github.com/electron/spectron) 3.8.0
- - [Angular](https://angular.io/) 5.2
- - [Angular CLI](https://cli.angular.io/) 1.6.8
+ - [Angular](https://angular.io/) 6
+ - [Angular CLI](https://cli.angular.io/) 6
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
- - [Typescript](https://www.typescriptlang.org/) 2.5.3
+ - [Typescript](https://www.typescriptlang.org/)
  - Native node.js addons (using [nan](https://github.com/nodejs/nan))
  - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
  - Hot reload for development
@@ -128,13 +128,28 @@ You can define application name, version, author and runtime node dependencies i
 	**Note** *that first time you run `npm start` the application might open with console error saying "Not allowed to load local resource: file:///.../electron-angular-native/serve/index.html".  
 	The reason for that is that webpack compilation and electron serve run simultaneously and the application starts before the code is ready.  
 	All you need to do is wait - once the compilation is complete the application will reload with the compiled code.*
+
+- **Debugging production build (AoT, Uglify etc.):**  
+
+  Sometimes you want to make sure your code compiles in production mode during the development (or even debug AoT related issues).  
+  In order to build the application in production mode run:  
+  
+  ```bash
+  npm run build:prod
+  ```
+  
+  If you want to *debug* the application in production mode (built with AoT) use this:
+  
+  ```bash
+  npm run start:prod
+  ```
 	
 - **Compiling native code:** 
 
 	Native code is not compiled on every `npm start` (it's only compiled on `npm install` and before the distribution), but if you want to recompile it, run the following command from your *bash* command line:  
 
 	```bash
-	npm run compile:native
+	npm run electron:build:native
 	```
 
 - **Running end to end tests with Spectron:**  
@@ -149,22 +164,9 @@ You can define application name, version, author and runtime node dependencies i
 	
 	 - `native-links.e2e-spec.ts` verifies that the links that loaded from native modules present upon the application start
 	 - `sanity.e2e-spec.ts` verifies that the application starts
+	 
+	**Note** *that end-to-end tests check the end user application (meaning the application created with `npm run dist` command). This means that prior to executing `npm run e2e` you have to execute `npm run dist` at least once*
 	
-- **AoT build:**  
-
-  Sometimes you want to make sure your code compiles with AoT compiler during the development.  
-  In order to do that use the following command:  
-  
-  ```bash
-  npm run build
-  ```
-  
-  If you want to *run* the application in product mode (built with AoT) use this:
-  
-  ```bash
-  npm run start:prod
-  ```
-  
 ## Distribution
 
  - Run the following from the root folder to create a distribution for:  
