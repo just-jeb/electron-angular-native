@@ -17,7 +17,7 @@
     "addon"
   ],
   "scripts": {
-    "postinstall": "npm run compile:native",
+    "postinstall": "npm run electron:build:native",
 
     "ng": "ng",
     "test": "karma start ./karma.conf.js",
