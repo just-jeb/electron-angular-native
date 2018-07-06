@@ -1,11 +1,10 @@
 {
   "name": "electron-angular-native",
   "version": "2.2.1",
-  "license": "Apache-2.0",
+  "license": "Apache -2.0",
   "author": "Evgeny Barabanov",
   "engines": {
-    "node": ">=8.9.1"
-  },
+    "node": ">=8.9.1"},
   "repository": {
     "type": "git",
     "url": "https://github.com/meltedspark/electron-angular-native"
@@ -22,21 +21,28 @@
   ],
   "scripts": {
     "postinstall": "npm run electron:build:native",
+
     "ng": "ng",
-    "test": "karma start ./karma.conf.js",
+    "test": "ng test",
     "lint": "ng lint",
     "e2e": "cross-env TS_NODE_PROJECT=e2e/tsconfig.e2e.json mocha -r ts-node/register e2e/**/*.e2e-spec.ts",
+
     "start": "rimraf serve && npm run electron:build:serve && concurrently \"npm run ng:watch:dev\" \"electron . --serve\"",
     "start:prod": "rimraf serve && npm run electron:build:serve && concurrently \"npm run ng:watch:prod\" \"electron . --serve\"",
+
     "build": "npm run ng:build:prod && npm run electron:build:dist",
     "build:dev": "npm run ng:build:dev && npm run electron:build:dist",
+
     "electron:build:native": "electron-rebuild && rimraf build bin",
     "electron:build:serve": "tsc src/main.electron.ts --types --outDir serve",
     "electron:build:dist": "tsc src/main.electron.ts --types --outDir dist",
+
     "ng:build:prod": "ng build --prod --output-path=dist/",
     "ng:build:dev": "ng build --output-path=dist/",
+
     "ng:watch:prod": "ng build --prod --watch --delete-output-path=false --output-path=serve/",
     "ng:watch:dev": "ng build --watch --delete-output-path=false --output-path=serve/",
+
     "dist": "npm run build && npm run clean-build && npx electron-builder build",
     "dist:dev": "npm run build:dev && npm run clean-build && npx electron-builder build",
     "dist:windows:32": "cross-env ARCH=ia32 PLATFORM=win32 npm run build && npm run clean-build && npx electron-builder build --windows --ia32",
@@ -44,31 +50,32 @@
     "dist:linux:32": "cross-env ARCH=ia32 PLATFORM=linux npm run build && npm run clean-build && npx electron-builder build --linux --ia32",
     "dist:linux:64": "cross-env ARCH=x64 PLATFORM=linux npm run build && npm run clean-build && npx electron-builder build --linux --x64",
     "dist:osx": "cross-env ARCH=x64 PLATFORM=mac npm run build && npm run clean-build && npx electron-builder build --mac",
+
     "clean-build": "rimraf build-artifacts build"
   },
   "dependencies": {
-    "@angular/animations": "^6.0.3",
-    "@angular/common": "^6.0.3",
-    "@angular/compiler": "^6.0.3",
-    "@angular/core": "^6.0.3",
-    "@angular/forms": "^6.0.3",
-    "@angular/http": "^6.0.3",
-    "@angular/platform-browser": "^6.0.3",
-    "@angular/platform-browser-dynamic": "^6.0.3",
-    "@angular/router": "^6.0.3",
-    "core-js": "^2.5.4",
-    "electron": "^2.0.3",
+    "@angular/animations": "^6.0.7",
+    "@angular/common": "^6.0.7",
+    "@angular/compiler": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/forms": "^6.0.7",
+    "@angular/http": "^6.0.7",
+    "@angular/platform-browser": "^6.0.7",
+    "@angular/platform-browser-dynamic": "^6.0.7",
+    "@angular/router": "^6.0.7",
+    "core-js": "^2.5.7",
+    "electron": "^2.0.4",
     "ffi": "^2.2.0",
     "ngx-electron": "^1.0.4",
-    "rxjs": "^6.0.0",
+    "rxjs": "^6.2.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.7.0-rc.0",
     "@angular-devkit/build-angular": "^0.7.0-rc.0",
     "@angular/cli": "~6.0.8",
-    "@angular/compiler-cli": "^6.0.3",
-    "@angular/language-service": "^6.0.3",
+    "@angular/compiler-cli": "^6.0.7",
+    "@angular/language-service": "^6.0.7",
     "@types/chai": "^4.1.4",
     "@types/chai-as-promised": "^7.1.0",
     "@types/jasmine": "~2.8.6",
@@ -79,13 +86,12 @@
     "angular-cli-builders": "^1.0.5",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "codelyzer": "~4.2.1",
+    "codelyzer": "^4.2.1",
     "concurrently": "^3.6.0",
-    "cpy-cli": "^2.0.0",
     "cross-env": "^5.2.0",
-    "electron-builder": "^20.17.0",
-    "electron-rebuild": "^1.7.3",
-    "electron-reload": "^1.2.3",
+    "electron-builder": "^20.19.2",
+    "electron-rebuild": "^1.8.1",
+    "electron-reload": "^1.2.5",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
@@ -95,10 +101,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "mocha": "^5.2.0",
     "node-loader": "^0.6.0",
-    "protractor": "~5.3.0",
+
     "spectron": "^3.8.0",
-    "ts-node": "~5.0.1",
-    "tslint": "~5.9.1",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
     "typescript": "~2.7.2"
   }
 }
