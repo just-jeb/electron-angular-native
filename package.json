@@ -83,7 +83,7 @@
     "@types/mocha": "^5.2.4",
     "@types/node": "~8.9.4",
     "@types/webdriverio": "^4.10.3",
-    "angular-cli-builders": "^1.0.5",
+    "angular-cli-builders": "^2.0.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "codelyzer": "^4.2.1",
