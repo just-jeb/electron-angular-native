@@ -13,7 +13,9 @@
         "build": {
           "builder": "angular-cli-builders:custom-webpack-browser",
           "options": {
-            "webpackConfigPath": "./native-webpack.config.js",
+            "customWebpackConfig": {
+              "path": "./native-webpack.config.js"
+            },
             "outputPath": "dist/electron-angular-native",
             "index": "src/index.html",
             "main": "src/main.ts",
