@@ -81,7 +81,7 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/mocha": "^5.2.4",
-    "@types/node": "~8.9.4",
+    "@types/node": "~10.5.3",
     "@types/webdriverio": "^4.10.3",
     "angular-cli-builders": "^2.0.0",
     "chai": "^4.1.2",
