@@ -1,8 +1,8 @@
 import {SpectronUtils} from './common/spectron-utils';
 import {Application} from 'spectron';
 
-const chaiAsPromised = require('chai-as-promised');
-const chai = require('chai');
+import * as chai from 'chai';
+import * as chaiAsPromised from 'chai-as-promised';
 
 chai.should();
 chai.use(chaiAsPromised);
