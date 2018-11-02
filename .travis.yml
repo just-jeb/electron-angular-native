@@ -9,7 +9,7 @@ matrix:
     - os: linux
 
 node_js:
-  - 8
+  - 10
 env:
   - ELECTRON_CACHE=$HOME/.electron
 
@@ -28,7 +28,6 @@ addons:
       - xorriso
       - xvfb
 before_install:
-- '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
 - npm install -g greenkeeper-lockfile
 install:
   - npm install
