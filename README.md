@@ -16,20 +16,19 @@ Native code is supported in two different ways:
 
 ## Features
 
- - [Electron](http://electron.atom.io/) 2.0.4
- - [Spectron](https://github.com/electron/spectron) 3.8.0
- - [Angular](https://angular.io/) 6
- - [Angular CLI](https://cli.angular.io/) 6
+ - [Electron](http://electron.atom.io/) 3
+ - [Spectron](https://github.com/electron/spectron) 5
+ - [Angular](https://angular.io/) 7
+ - [Angular CLI](https://cli.angular.io/) 7
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
- - [Typescript](https://www.typescriptlang.org/)
+ - [Typescript](https://www.typescriptlang.org/) 3
  - Native node.js addons (using [nan](https://github.com/nodejs/nan))
- - Native libraries support (using [node-ffi](https://github.com/node-ffi/node-ffi) 2.2.0)
+ - Native libraries support (using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi) 2.4.0)
  - Hot reload for development
 
 ## Getting ready
 
-1. In order to clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.   
-   * **Node 9 is not supported yet** due to a [node-ffi issue](https://github.com/node-ffi/node-ffi/issues/438) 
+1. In order to clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [yarn](https://yarnpkg.com) installed on your computer.   
    * **bash command line is required (use git-bash for windows)**
 2. Clone the repository
 	* If you're behind a corporate firewall configure `git` proxy:  
@@ -135,13 +134,13 @@ You can define application name, version, author and runtime node dependencies i
   In order to build the application in production mode run:  
   
   ```bash
-  npm run build:prod
+  yarn build:prod
   ```
   
   If you want to *debug* the application in production mode (built with AoT) use this:
   
   ```bash
-  npm run start:prod
+  yarn start:prod
   ```
 	
 - **Compiling native code:** 
@@ -149,7 +148,7 @@ You can define application name, version, author and runtime node dependencies i
 	Native code is not compiled on every `npm start` (it's only compiled on `npm install` and before the distribution), but if you want to recompile it, run the following command from your *bash* command line:  
 
 	```bash
-	npm run electron:build:native
+	yarn electron:build:native
 	```
 
 - **Running end to end tests with Spectron:**  
@@ -157,7 +156,7 @@ You can define application name, version, author and runtime node dependencies i
 	To run end to end tests use the following command:
 	
 	```bash
-	npm run e2e
+	yarn e2e
 	``` 
 	This will run all the tests in `e2e` directory (the tests extension must be `.e2e-spec.ts`).  
 	For your convenience there is a helper class `SpectronUtils` which can be used for tests definition and two test examples:
@@ -165,7 +164,7 @@ You can define application name, version, author and runtime node dependencies i
 	 - `native-links.e2e-spec.ts` verifies that the links that loaded from native modules present upon the application start
 	 - `sanity.e2e-spec.ts` verifies that the application starts
 	 
-	**Note** *that end-to-end tests check the end user application (meaning the application created with `npm run dist` command). This means that prior to executing `npm run e2e` you have to execute `npm run dist` at least once*
+	**Note** *that end-to-end tests check the end user application (meaning the application created with `yarn dist` command). This means that prior to executing `yarn e2e` you have to execute `yarn dist` at least once*
 	
 ## Distribution
 
@@ -174,30 +173,30 @@ You can define application name, version, author and runtime node dependencies i
    - Current platform:
     
      ```bash
-     npm run dist
+     yarn dist
 	- Windows 32 bit:  
  
 		```bash
-		npm run dist:windows:32
+		yarn dist:windows:32
 	- Windows 64 bit:   
  
 		```bash
-		npm run dist:windows:64
+		yarn dist:windows:64
 	 - Linux 32 bit:
 	
 		```bash
-		npm run dist:linux:32
+		yarn dist:linux:32
 	- Linux 64 bit:
 	
 		```bash
-		npm run dist:linux:64
+		yarn dist:linux:64
 	- OSX:
 	
 		```bash
-		npm run dist:osx
+		yarn dist:osx
  - Be aware that cross-platform builds are [performed](https://www.electron.build/multi-platform-build) on remote server
  - Distributed application is built in production mode (to benefit from [Angular AoT](https://angular.io/guide/aot-compiler)).  
-   If for some reason you want it in dev mode (JIT), run `npm run dist:dev` 
+   If for some reason you want it in dev mode (JIT), run `yarn dist:dev` 
  - Build artifact can be found in build-artifacts folder
  
 ## Useful links
