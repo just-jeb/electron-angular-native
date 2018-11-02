@@ -1,4 +1,4 @@
-import {Library, types} from 'ffi';
+import {Library, types} from 'ffi-napi';
 import {LinkProvider} from './link-provider';
 import {Injectable} from '@angular/core';
 import * as path from 'path';
