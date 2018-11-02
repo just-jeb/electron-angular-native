@@ -9,10 +9,10 @@ Native code is supported in two different ways:
  - [native node.js addon](https://nodejs.org/api/addons.html) (.node) using [nan](https://github.com/nodejs/nan).  
    This is useful when you own the code and you want it to be part of the build.  
    In this case the native source code is part of your application code base and compiled with [node-gyp](https://github.com/nodejs/node-gyp).
- - Native library (.dll, .so or .dylib) using [node-ffi](https://github.com/node-ffi/node-ffi).  
+ - Native library (.dll, .so or .dylib) using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi).  
    This is useful when you don't own the code of the native library or, alternatively, have another project which already compiles to a native library 
    and you want to utilize this library in your Electron application.  
-   In this case you supply precompiled libraries and use them via Foreign Function Interface (**node-ffi**)
+   In this case you supply precompiled libraries and use them via Foreign Function Interface (**node-ffi-napi**)
 
 ## Features
 
@@ -23,7 +23,7 @@ Native code is supported in two different ways:
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
  - [Typescript](https://www.typescriptlang.org/) 3
  - Native node.js addons (using [nan](https://github.com/nodejs/nan))
- - Native libraries support (using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi) 2.4.0)
+ - Native libraries support (using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi))
  - Hot reload for development
 
 ## Getting ready
@@ -51,11 +51,11 @@ Native code is supported in two different ways:
 		
 3. Prepare the environment  
 
-	* If you're behind a corporate firewall configure `npm` proxy:  
+	* If you're behind a corporate firewall configure `yarn` proxy:  
 		
 		```bash
-		npm config set proxy http://proxy.company.com:port  
-		npm config set https-proxy http://proxy.company.com:port
+		yarn config set proxy http://proxy.company.com:port  
+		yarn config set https-proxy http://proxy.company.com:port
 		```
 	* **EXTREMELY IMPORTANT**: Make sure you have `python v2.7` and appropriate `C\C++ compiler toolchain` installed:
 	
@@ -99,7 +99,7 @@ Native code is supported in two different ways:
 		
 		```bash
 		# Install dependencies
-		npm install
+		yarn
 		```  
 		
 ## Application structure
@@ -108,7 +108,7 @@ Native code is supported in two different ways:
  - All the native source code resides in `src/native/` directory (a new native source code shall be put there as well)
  - Precompiled binaries (`simplelib`) are fetched from [another git repository](https://github.com/meltedspark/electron-angular-native-simplelib-bin) as git submodule and can be found in `native-artifacts/precompiled-libraries` directory.  
    If you have any precompiled binaries you'd like to use in your project just put them inside this directory, while keeping platform and architecture subdirectories same to the `simplelib`.
- - Native artifacts that were compiled from the source code as part of the build can be found in `native-artifacts/native-addons` directory (first time compiled on `npm install`)
+ - Native artifacts that were compiled from the source code as part of the build can be found in `native-artifacts/native-addons` directory (first time compiled on `yarn`)
   
 ## Application info
 You can define application name, version, author and runtime node dependencies in `app.package.js`  
@@ -118,13 +118,13 @@ You can define application name, version, author and runtime node dependencies i
 - **Running application in debug mode:**
 
 	```bash
-	npm start
+	yarn start
 	```
   
 	This will run your Electron Angular application in watch mode, i.e. if you change any `.ts` file the application will reload the changes automatically.  
 	The application starts with debug tools open so that you can place breakpoints and debug your Typescript code.  
 	
-	**Note** *that first time you run `npm start` the application might open with console error saying "Not allowed to load local resource: file:///.../electron-angular-native/serve/index.html".  
+	**Note** *that first time you run `yarn start` the application might open with console error saying "Not allowed to load local resource: file:///.../electron-angular-native/serve/index.html".  
 	The reason for that is that webpack compilation and electron serve run simultaneously and the application starts before the code is ready.  
 	All you need to do is wait - once the compilation is complete the application will reload with the compiled code.*
 
@@ -145,7 +145,7 @@ You can define application name, version, author and runtime node dependencies i
 	
 - **Compiling native code:** 
 
-	Native code is not compiled on every `npm start` (it's only compiled on `npm install` and before the distribution), but if you want to recompile it, run the following command from your *bash* command line:  
+	Native code is not compiled on every `yarn start` (it's only compiled on `yarn` and before the distribution), but if you want to recompile it, run the following command from your *bash* command line:  
 
 	```bash
 	yarn electron:build:native
