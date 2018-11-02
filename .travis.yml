@@ -9,7 +9,7 @@ matrix:
     - os: linux
 
 node_js:
-  - 8
+  - 10
 env:
   - ELECTRON_CACHE=$HOME/.electron
 
@@ -28,10 +28,10 @@ addons:
       - xorriso
       - xvfb
 before_install:
-- '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
-- npm install -g greenkeeper-lockfile
+  - npm i -g yarn@1
+  - yarn global add greenkeeper-lockfile@2
 install:
-  - npm install
+  - yarn
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
@@ -42,6 +42,6 @@ before_script:
   - greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
-  - npm run dist
+  - yarn dist
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo hdiutil attach ./build-artifacts/ElectronAngularNativeApp.dmg; fi
-  - npm run e2e
+  - yarn e2e

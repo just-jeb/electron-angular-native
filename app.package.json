@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "main": "main.electron.js",
   "dependencies": {
-    "ffi": "^2.2.0"
+    "ffi-napi": "^2.4.3"
   }
 }
