@@ -59,7 +59,7 @@
     "core-js": "^2.5.7",
     "electron": "^3.0.7",
     "ffi-napi": "^2.4.3",
-    "ngx-electron": "^1.0.4",
+    "ngx-electron": "^2.0.0",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.26"
   },
