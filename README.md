@@ -16,7 +16,7 @@ Native code is supported in two different ways:
 
 ## Features
 
- - [Electron](http://electron.atom.io/) 3
+ - [Electron](http://electron.atom.io/) 4
  - [Spectron](https://github.com/electron/spectron) 5
  - [Angular](https://angular.io/) 7
  - [Angular CLI](https://cli.angular.io/) 7
