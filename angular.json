@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "electron-angular-native"
+  "defaultProject": "electron-angular-native",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }

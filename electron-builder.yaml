@@ -17,4 +17,4 @@ linux:
     - AppImage
 nodeGypRebuild: true
 asar: false
-electronVersion: 3.0.7
+electronVersion: 4.0.1
