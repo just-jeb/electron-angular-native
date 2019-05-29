@@ -7,12 +7,13 @@
   resolved "https://registry.yarnpkg.com/7zip-bin/-/7zip-bin-4.1.0.tgz#33eff662a5c39c0c2061170cc003c5120743fff0"
   integrity sha512-AsnBZN3a8/JcNt+KPkGGODaA4c7l3W5+WpeKgGSbstSLxqWtTXqd1ieJGBQ8IFCtRg8DmmKUcSkIkUc0A4p3YA==
 
-"@angular-builders/custom-webpack@^7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@angular-builders/custom-webpack/-/custom-webpack-7.1.1.tgz#29d78573500ebf7b8a37bdccaeb398d593aa40da"
-  integrity sha512-FRRV8JVs765PjAKjy30rAH7gXNgZjXbyYqtLyv3C9MQLvdjRAkwIUwGvhJXggYlPvjab4OQdWo815YNcdECFcg==
+"@angular-builders/custom-webpack@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-builders/custom-webpack/-/custom-webpack-8.0.1.tgz#1048373f0b8039f4a823c66ac542a096d8313768"
+  integrity sha512-gijT9xjGj1Y95yHG5iaaaIxi2vnBnAqGKtfmy0ptrHNu0yc+7oiPGvhoC6FyW1meMaSrbDCxpD1vcKfeZOhDxQ==
   dependencies:
     lodash "^4.17.10"
+    webpack-merge "^4.2.1"
 
 "@angular-devkit/architect@0.11.4":
   version "0.11.4"
@@ -8537,7 +8538,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@4.2.1:
+webpack-merge@4.2.1, webpack-merge@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.1.tgz#5e923cf802ea2ace4fd5af1d3247368a633489b4"
   integrity sha512-4p8WQyS98bUJcCvFMbdGZyZmsKuWjWVnVHnAS3FFg0HDaRVrPbkivx2RYCre8UiemD67RsiFFLfn4JhLAin8Vw==
