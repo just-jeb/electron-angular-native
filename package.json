@@ -1,14 +1,14 @@
 {
   "name": "electron-angular-native",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "license": "Apache-2.0",
   "author": "Evgeny Barabanov",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/meltedspark/electron-angular-native"
+    "url": "https://github.com/just-jeb/electron-angular-native"
   },
   "main": "serve/main.electron.js",
   "keywords": [
