@@ -10,6 +10,7 @@ win:
 mac:
   target:
     - dmg
+  identity: null
 dmg:
   title: ${productName}
 linux:
