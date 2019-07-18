@@ -9,7 +9,7 @@ matrix:
     - os: linux
 
 node_js:
-  - 10
+  - 12
 env:
   - ELECTRON_CACHE=$HOME/.electron
 
