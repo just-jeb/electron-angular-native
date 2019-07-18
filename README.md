@@ -1,8 +1,8 @@
 <a href="https://electronjs.org/"><img src="https://camo.githubusercontent.com/627c774e3070482b180c3abd858ef2145d46303b/68747470733a2f2f656c656374726f6e6a732e6f72672f696d616765732f656c656374726f6e2d6c6f676f2e737667" alt="Electron" height="50px"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/electron/spectron"><img src="https://cloud.githubusercontent.com/assets/378023/15063284/cf544f2c-1383-11e6-9336-e13bd64b1694.png" alt="Electron" height="50px"/></a>&nbsp;&nbsp;
-<a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" width="50px"/></a>&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native.svg)](https://badge.fury.io/gh/meltedspark%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/meltedspark/electron-angular-native.svg)](https://github.com/meltedspark/electron-angular-native/blob/master/LICENSE.md)
+<a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" width="50px"/></a>&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/just-jeb%2Felectron-angular-native.svg)](https://badge.fury.io/gh/just-jeb%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/just-jeb/electron-angular-native.svg)](https://github.com/just-jeb/electron-angular-native/blob/master/LICENSE.md)
 
-**Linux/Mac**: [![Build Status](https://travis-ci.org/meltedspark/electron-angular-native.svg?branch=master)](https://travis-ci.org/meltedspark/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/meltedspark/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/meltedspark/electron-angular-native/branch/master) [![Greenkeeper badge](https://badges.greenkeeper.io/meltedspark/electron-angular-native.svg)](https://greenkeeper.io/)
+**Linux/Mac**: [![Build Status](https://travis-ci.org/just-jeb/electron-angular-native.svg?branch=master)](https://travis-ci.org/just-jeb/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/just-jeb/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/just-jeb/electron-angular-native/branch/master) [![Greenkeeper badge](https://badges.greenkeeper.io/just-jeb/electron-angular-native.svg)](https://greenkeeper.io/)
  
 Easy to use, ready for distribution boilerplate for Electron Angular applications supporting native code.  
 Native code is supported in two different ways:
@@ -16,12 +16,12 @@ Native code is supported in two different ways:
 
 ## Features
 
- - [Electron](http://electron.atom.io/) 4
- - [Spectron](https://github.com/electron/spectron) 5
- - [Angular](https://angular.io/) 7
- - [Angular CLI](https://cli.angular.io/) 7
+ - [Electron](http://electron.atom.io/) 5
+ - [Spectron](https://github.com/electron/spectron) 7
+ - [Angular](https://angular.io/) 8
+ - [Angular CLI](https://cli.angular.io/) 8
  - [Angular AoT](https://angular.io/guide/aot-compiler) for production
- - [Typescript](https://www.typescriptlang.org/) 3
+ - [Typescript](https://www.typescriptlang.org/) 3.4
  - Native node.js addons (using [nan](https://github.com/nodejs/nan))
  - Native libraries support (using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi))
  - Hot reload for development
@@ -42,9 +42,9 @@ Native code is supported in two different ways:
 		```bash
 		# Clone this repository
 		# git > 2.13
-		git clone --recurse-submodules https://github.com/meltedspark/electron-angular-native
+		git clone --recurse-submodules https://github.com/just-jeb/electron-angular-native
 		# git <= 2.12
-		git clone --recursive https://github.com/meltedspark/electron-angular-native
+		git clone --recursive https://github.com/just-jeb/electron-angular-native
 		# Go into the repository
 		cd electron-angular-native
 		```  
@@ -106,7 +106,7 @@ Native code is supported in two different ways:
 
  - All the source code resides in `src/` directory
  - All the native source code resides in `src/native/` directory (a new native source code shall be put there as well)
- - Precompiled binaries (`simplelib`) are fetched from [another git repository](https://github.com/meltedspark/electron-angular-native-simplelib-bin) as git submodule and can be found in `native-artifacts/precompiled-libraries` directory.  
+ - Precompiled binaries (`simplelib`) are fetched from [another git repository](https://github.com/just-jeb/electron-angular-native-simplelib-bin) as git submodule and can be found in `native-artifacts/precompiled-libraries` directory.  
    If you have any precompiled binaries you'd like to use in your project just put them inside this directory, while keeping platform and architecture subdirectories same to the `simplelib`.
  - Native artifacts that were compiled from the source code as part of the build can be found in `native-artifacts/native-addons` directory (first time compiled on `yarn`)
   
