@@ -25,7 +25,7 @@
     "ng": "ng",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ts-mocha -p e2e/tsconfig.e2e.json e2e/**/*.e2e-spec.ts",
+    "e2e": "ts-mocha -p e2e/tsconfig.json e2e/**/*.e2e-spec.ts",
     "start": "rimraf serve && yarn electron:build:serve && concurrently \"yarn ng:watch:dev\" \"electron . --serve\"",
     "start:prod": "rimraf serve && yarn electron:build:serve && concurrently \"yarn ng:watch:prod\" \"electron . --serve\"",
     "build": "yarn ng:build:prod && yarn electron:build:dist",
