@@ -92,6 +92,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "mocha": "^6.1.4",
+    "nan": "^2.14.0",
     "node-loader": "^0.6.0",
     "spectron": "^7.0.0",
     "ts-mocha": "^6.0.0",
