@@ -1,12 +1,17 @@
 #include <nan.h>
 
-void Method(const Nan::FunctionCallbackInfo<v8::Value>& info) {
-  info.GetReturnValue().Set(Nan::New("https://github.com/nodejs/nan").ToLocalChecked());
+using namespace Nan;
+
+NAN_METHOD(GetLinkMethod) {
+  v8::Local<v8::String> link = New("https://github.com/nodejs/nan").ToLocalChecked();
+  info.GetReturnValue().Set(link);
 }
 
-void Init(v8::Local<v8::Object> exports) {
-  exports->Set(Nan::New("getLink").ToLocalChecked(),
-               Nan::New<v8::FunctionTemplate>(Method)->GetFunction());
+NAN_MODULE_INIT(Init) {
+  Set(target 
+    , New("getLink").ToLocalChecked()
+    , GetFunction(New<v8::FunctionTemplate>(GetLinkMethod)).ToLocalChecked()
+  );
 }
 
 NODE_MODULE(StringProvider, Init)
