@@ -25,6 +25,7 @@ Native code is supported in two different ways:
  - Native node.js addons (using [nan](https://github.com/nodejs/nan))
  - Native libraries support (using [node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi))
  - Hot reload for development
+ - CI configs for Windows ([AppVeyor](./appveyor.yml)), Linux and Mac ([Travis CI](./.travis.yml))
 
 ## Getting ready
 
