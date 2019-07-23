@@ -2,7 +2,7 @@
 <a href="https://github.com/electron/spectron"><img src="https://cloud.githubusercontent.com/assets/378023/15063284/cf544f2c-1383-11e6-9336-e13bd64b1694.png" alt="Electron" height="50px"/></a>&nbsp;&nbsp;
 <a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" width="50px"/></a>&nbsp;&nbsp;[![GitHub version](https://badge.fury.io/gh/just-jeb%2Felectron-angular-native.svg)](https://badge.fury.io/gh/just-jeb%2Felectron-angular-native) [![GitHub license](https://img.shields.io/github/license/just-jeb/electron-angular-native.svg)](https://github.com/just-jeb/electron-angular-native/blob/master/LICENSE.md)
 
-**Linux/Mac**: [![Build Status](https://travis-ci.org/just-jeb/electron-angular-native.svg?branch=master)](https://travis-ci.org/just-jeb/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/just-jeb/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/just-jeb/electron-angular-native/branch/master) [![Greenkeeper badge](https://badges.greenkeeper.io/just-jeb/electron-angular-native.svg)](https://greenkeeper.io/)
+**Linux/Mac**: [![Build Status](https://travis-ci.org/just-jeb/electron-angular-native.svg?branch=master)](https://travis-ci.org/just-jeb/electron-angular-native)  **Windows**: [![Build status](https://ci.appveyor.com/api/projects/status/github/just-jeb/electron-angular-native?branch=master&svg=true)](https://ci.appveyor.com/project/just-jeb/electron-angular-native/branch/master)
  
 Easy to use, ready for distribution boilerplate for Electron Angular applications supporting native code.  
 Native code is supported in two different ways:
