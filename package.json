@@ -81,7 +81,7 @@
     "codelyzer": "^5.1.0",
     "concurrently": "^4.1.1",
     "cross-env": "^5.2.0",
-    "electron-builder": "^21.1.5",
+    "electron-builder": "^21.2.0",
     "electron-rebuild": "^1.8.5",
     "electron-reload": "^1.4.1",
     "jasmine-core": "~3.4.0",
