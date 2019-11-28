@@ -24,18 +24,26 @@
     "@angular-devkit/core" "8.3.19"
     rxjs "6.4.0"
 
-"@angular-devkit/build-angular@^0.803.19":
-  version "0.803.19"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.19.tgz#feacc447edeffdb227c47cbf1c370c64dc4a4110"
-  integrity sha512-GCnwOe3PVYVcTwaj8cU7XvmjeTdoX7NgPBm9Pp3UuPi2lDQG27mdz57F1aMXGPZRU2P03EdCaiXoS/4h4+4gmg==
+"@angular-devkit/architect@0.803.20":
+  version "0.803.20"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.20.tgz#792093259d69012c0763aa9176181b255d8795c8"
+  integrity sha512-NjyDJ61i9kh8J+qXt0E2j+P5Xsmi2mPasBzwcQyrZZGiho4zC0IFxcdxyzcsXFEupmilJKkjdt2g4QQRC5rUDQ==
   dependencies:
-    "@angular-devkit/architect" "0.803.19"
-    "@angular-devkit/build-optimizer" "0.803.19"
-    "@angular-devkit/build-webpack" "0.803.19"
-    "@angular-devkit/core" "8.3.19"
+    "@angular-devkit/core" "8.3.20"
+    rxjs "6.4.0"
+
+"@angular-devkit/build-angular@^0.803.20":
+  version "0.803.20"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.803.20.tgz#b19b0d82c75cbdd939b589a33ccb60e2c9f6eec9"
+  integrity sha512-JDZkZjOqPbOtCMsSKxQf9C+uSTZ7fQGlKGsCpJMzfa4iQ0WrmrhZvnRKQeEpMTTZTpuou/HQeQjyDV+Sx3yumw==
+  dependencies:
+    "@angular-devkit/architect" "0.803.20"
+    "@angular-devkit/build-optimizer" "0.803.20"
+    "@angular-devkit/build-webpack" "0.803.20"
+    "@angular-devkit/core" "8.3.20"
     "@babel/core" "7.5.5"
     "@babel/preset-env" "7.5.5"
-    "@ngtools/webpack" "8.3.19"
+    "@ngtools/webpack" "8.3.20"
     ajv "6.10.2"
     autoprefixer "9.6.1"
     browserslist "4.6.6"
@@ -86,10 +94,10 @@
     webpack-subresource-integrity "1.1.0-rc.6"
     worker-plugin "3.2.0"
 
-"@angular-devkit/build-optimizer@0.803.19":
-  version "0.803.19"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.19.tgz#49396144416c1bce8e6cb1f0546135f3ff7b41c9"
-  integrity sha512-7chgsnEYZWMLpdYvsw64o5b+F0XRZr7zJd5LtbTF7mFYafcD+bUyaMOjWLup1G/VWv8xGXEsdm8Z1sWhis8LZw==
+"@angular-devkit/build-optimizer@0.803.20":
+  version "0.803.20"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.803.20.tgz#36f92c350c1cb3d3d7f1e0f0086feed726478902"
+  integrity sha512-Vzxf1g1EuzaPBoScDYUhyxemi5chlgnpWmObNo5dzVAVzjxo5gJeDIGpiyDqHvr6LBkprqb6XHcZhMWqIcdIHg==
   dependencies:
     loader-utils "1.2.3"
     source-map "0.7.3"
@@ -97,19 +105,30 @@
     typescript "3.5.3"
     webpack-sources "1.4.3"
 
-"@angular-devkit/build-webpack@0.803.19":
-  version "0.803.19"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.19.tgz#afd294cff1b88a0c791f8b10a04cfc44e6cf6038"
-  integrity sha512-FdNxR47QCUts00z4jLVFot37m08QwGlUnjcYHFg6xPLvJzR2MuLpl0MrpWCdI82NCgCqCkNoQ8yrSDKuOY7Iug==
+"@angular-devkit/build-webpack@0.803.20":
+  version "0.803.20"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.803.20.tgz#c03bd23a9f147c07201db681bf9fc3bfad95f9d9"
+  integrity sha512-35af8kD3KG/cIv7AB09YNER5HIPlx55ipBxdVk8D+X3MuUcTmD6fFvqXcV0EPlD1vQephthfzSgtNpvuPv4xuA==
   dependencies:
-    "@angular-devkit/architect" "0.803.19"
-    "@angular-devkit/core" "8.3.19"
+    "@angular-devkit/architect" "0.803.20"
+    "@angular-devkit/core" "8.3.20"
     rxjs "6.4.0"
 
 "@angular-devkit/core@8.3.19":
   version "8.3.19"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.19.tgz#c3310bfdbd456c6301ed33713c7b58fea7822f5b"
   integrity sha512-NTNxSpRB6zMlqsuWLHs2F6QuypIb/XUitMkJy2P7Ee3kZfCYvvH9cCkiQqkwEhKw6J01qKeXwOElmxnqmF291w==
+  dependencies:
+    ajv "6.10.2"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.3"
+    rxjs "6.4.0"
+    source-map "0.7.3"
+
+"@angular-devkit/core@8.3.20":
+  version "8.3.20"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.20.tgz#8a9e17e706905efab9875c16690e1d9328c9d5dd"
+  integrity sha512-UCfW/BJBJnioJU34QennQhA4o+rLoCXWiSrI2LM7yw8/MEM9I8KbqRETP1My3HjHkQnvP+Qh3noedpcu3Nnt8A==
   dependencies:
     ajv "6.10.2"
     fast-json-stable-stringify "2.0.0"
@@ -872,12 +891,12 @@
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-"@ngtools/webpack@8.3.19":
-  version "8.3.19"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.19.tgz#9ed3123a9c3d79c49f73fd9a30cbe283ddde9d47"
-  integrity sha512-2PPnIsLmPSmtaurj+8SaWBWWheL8i3DOWY6fCbxgZRmCTcShHWBxPldzLMqGrTYhqjHdqnOO+uu1EEG5yyLBMw==
+"@ngtools/webpack@8.3.20":
+  version "8.3.20"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.20.tgz#a5288171b67c96e8d3b219f5108f1d6cd962d6a3"
+  integrity sha512-2e9Kat6PQEzqtNsZZpnOIvoDzyGwMELiuBYBa9keZeaXOD6TxjSyCRzHHXAldAXqvh4Uj2qjTid54Sy14CxtsQ==
   dependencies:
-    "@angular-devkit/core" "8.3.19"
+    "@angular-devkit/core" "8.3.20"
     enhanced-resolve "4.1.0"
     rxjs "6.4.0"
     tree-kill "1.2.1"
@@ -7900,20 +7919,15 @@ semver-intersect@1.4.0:
   dependencies:
     semver "^5.0.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.0, semver@^5.0.3, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0, semver@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz#790a7cf6fea5459bac96110b29b60412dc8ff96b"
-  integrity sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
+"semver@2 || 3 || 4 || 5", semver@^5.0.0, semver@^5.0.3, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0, semver@^5.7.0, semver@^5.7.1:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
+  integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
 semver@6.3.0, semver@^6.0.0, semver@^6.1.1, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
-
-semver@^5.7.1:
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
-  integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
 send@0.17.1:
   version "0.17.1"
