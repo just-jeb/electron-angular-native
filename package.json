@@ -78,7 +78,7 @@
     "@types/webdriverio": "^5.0.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "codelyzer": "^5.2.0",
+    "codelyzer": "^5.2.1",
     "concurrently": "^5.0.1",
     "cross-env": "^6.0.3",
     "electron-builder": "^22.2.0",
