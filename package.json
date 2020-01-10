@@ -55,7 +55,7 @@
     "@angular/platform-browser": "^8.1.2",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.1.2",
-    "core-js": "^3.6.2",
+    "core-js": "^3.6.3",
     "electron": "^6.0.3",
     "ffi-napi": "^2.4.5",
     "ngx-electron": "^2.1.1",
