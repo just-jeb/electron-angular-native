@@ -4114,15 +4114,15 @@ fd-slicer@~1.0.1:
   dependencies:
     pend "~1.2.0"
 
-ffi-napi@^2.4.5:
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/ffi-napi/-/ffi-napi-2.4.5.tgz#12e807f238f8c68fc094fc46c1ce5193c2ab64f8"
-  integrity sha512-24Et/c5/sRvZvpOZ9nvkK0Be1S8A1Vkt6aJSKGaohOGb5FwV4+EmecaTtNhN4TCLJDjYC8z/k4X8W1SC5IK/fw==
+ffi-napi@^2.4.6:
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/ffi-napi/-/ffi-napi-2.4.6.tgz#dd6dff27ac3c6da89229a88764804f5e2e6e79fd"
+  integrity sha512-AvfAV3dhA0A/8xPfSRX9Y7sDCjplbuA7wWSNjLMCoQJrg22+KXXKNS8ZMv5IqqTw6wWPAl1UoC27U4C05Fl6xg==
   dependencies:
     bindings "^1.3.0"
     debug "^3.1.0"
     get-uv-event-loop-napi-h "^1.0.5"
-    node-addon-api "1.5.0"
+    node-addon-api "1.6.1"
     ref-napi "^1.4.0"
     ref-struct-di "^1.1.0"
 
@@ -6405,10 +6405,10 @@ node-abi@^2.11.0:
   dependencies:
     semver "^5.4.1"
 
-node-addon-api@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-1.5.0.tgz#55be6b3da36e746f4b1f2af16c2adf67647d1ff8"
-  integrity sha512-YsL/8dpBWxCFj3wAVAa/ceN4TlT8lACK8EgpuN0q/4ecflWHDuKpodb+tt7Rx22r/6FJ2f+IT25XSsXnZGwYgA==
+node-addon-api@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-1.6.1.tgz#a9881c8dbc6400bac6ddedcb96eccf8051678536"
+  integrity sha512-GcLOYrG5/enbqH4SMsqXt6GQUQGGnDnE3FLDZzXYkCgQHuZV5UDFR+EboeY8kpG0avroyOjpFQ2qLEBosFcRIA==
 
 node-addon-api@^1.6.2:
   version "1.6.3"
