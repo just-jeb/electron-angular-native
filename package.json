@@ -73,7 +73,7 @@
     "@types/ffi-napi": "^2.4.1",
     "@types/jasmine": "~3.5.2",
     "@types/jasminewd2": "~2.0.8",
-    "@types/mocha": "^5.2.7",
+    "@types/mocha": "^7.0.0",
     "@types/node": "~13.1.8",
     "@types/webdriverio": "^5.0.0",
     "chai": "^4.2.0",
