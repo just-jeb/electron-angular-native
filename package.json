@@ -71,7 +71,7 @@
     "@types/chai": "^4.2.10",
     "@types/chai-as-promised": "^7.1.2",
     "@types/ffi-napi": "^2.4.1",
-    "@types/jasmine": "~3.5.7",
+    "@types/jasmine": "~3.5.8",
     "@types/jasminewd2": "~2.0.8",
     "@types/mocha": "^7.0.1",
     "@types/node": "~13.7.7",
