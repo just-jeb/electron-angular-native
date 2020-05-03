@@ -96,7 +96,7 @@
     "node-loader": "^0.6.0",
     "spectron": "^7.0.0",
     "ts-mocha": "^7.0.0",
-    "ts-node": "^8.9.1",
+    "ts-node": "^8.10.0",
     "tslint": "^6.1.2",
     "typescript": "3.4"
   }
