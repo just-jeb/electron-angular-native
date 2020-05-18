@@ -200,12 +200,10 @@
     tslib "^1.9.0"
     yargs "13.1.0"
 
-"@angular/compiler@^8.1.2":
-  version "8.1.2"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-8.1.2.tgz#db91a652a5c725b553ef946976446121c024bd0b"
-  integrity sha512-oRkHrstOV6imbb4mGf6q20d4N4iYfBbI6WfxtPL4dz08GipGg4Zvekn4e3R01vzhFBxssGcgmeEtFQJh/UzI8g==
-  dependencies:
-    tslib "^1.9.0"
+"@angular/compiler@^9.1.7":
+  version "9.1.7"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-9.1.7.tgz#e094f99f8742994761adeb1fd8090b21d2abff98"
+  integrity sha512-BiHJ3rAd00aJkur7ohnXjqBmz2QkSTAAFWLuBTYuHysxP4zJD54y4uUtsrCUReKL+8dkUv8AcfXBAkCBLvBUYg==
 
 "@angular/core@^8.1.2":
   version "8.1.2"
