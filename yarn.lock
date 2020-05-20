@@ -1176,10 +1176,10 @@
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
-"@types/ffi-napi@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@types/ffi-napi/-/ffi-napi-2.4.1.tgz#e28ec33998e41605b1792944e38798dee8612221"
-  integrity sha512-QbCEQZRMGOuin88fK7rOIVCJE9NnhgYV4fASV2yOSctt6UC+mZyx5HSXrBQX0VkFHctn+uTuuSbXzZZF0WLnPg==
+"@types/ffi-napi@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/ffi-napi/-/ffi-napi-2.4.2.tgz#20083dde112d8bf6fadf087f0831041f21e62c24"
+  integrity sha512-nfCnN74SWJyURb0J6Fx4QjDcOmwGXgAb5TLAg8pWNf3fl+I6NJk4sveB6eWb2lPk24/r755Vh8xgoft7uY6kEA==
   dependencies:
     "@types/node" "*"
     "@types/ref-napi" "*"
