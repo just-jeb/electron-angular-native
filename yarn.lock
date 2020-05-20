@@ -240,10 +240,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/router@^9.1.8":
-  version "9.1.8"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.1.8.tgz#d01026a43f65d4e867a29e381824b70e2fa733d9"
-  integrity sha512-ZZdJ4y4YiowQRx4/hEiAw+mGulqrNnnhX1Alfwua7k9paqk+BKyUq3ipy48L1sgk0LxwzeAvvfPS7ad/w/WjfQ==
+"@angular/router@^9.1.9":
+  version "9.1.9"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.1.9.tgz#5d79d72cb62ea1c04ea70238846653ecf9c4a73c"
+  integrity sha512-4u+CWMPB4hCkAsFCEzC94YEWT0wVozqGkc/Dortt2hFaqvZpIegg6iJVZlDxuyDjzFYBPnnbTDdgiTTA8ckfuA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5", "@babel/code-frame@^7.8.3":
   version "7.8.3"
