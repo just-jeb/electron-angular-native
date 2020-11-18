@@ -250,10 +250,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/router@^11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-11.0.0.tgz#59e855b0d34c4578e0556e181f2f28048fb0d5a8"
-  integrity sha512-10ZeobfK3HqVeWS6zjdKU16ccxFtdCHkxT11bnFg3Jwq9vKt+LI5KitAkCI5rYTY3DRfVzasRkqBzZfZMkbftw==
+"@angular/router@^11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-11.0.1.tgz#065ea1a3dff367048bdb2cab73bd7f9dcd9bb1e8"
+  integrity sha512-JSGFPCIqDEKwMf5jCRx9atUz/Ojo+x+9XV1Bm/BRzr9+DdQ/h62b/WbGGSRTa8LL01Ts5LLdBRtzMEPUMFLMOg==
   dependencies:
     tslib "^2.0.0"
 
