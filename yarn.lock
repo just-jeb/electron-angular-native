@@ -1116,10 +1116,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
-"@malept/cross-spawn-promise@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@malept/cross-spawn-promise/-/cross-spawn-promise-1.1.0.tgz#258fde4098f5004a56db67c35f33033af64810f6"
-  integrity sha512-GeIK5rfU1Yd7BZJQPTGZMMmcZy5nhRToPXZcjaDwQDRSewdhp648GT2E4dh+L7+Io7AOW6WQ+GR44QSzja4qxg==
+"@malept/cross-spawn-promise@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@malept/cross-spawn-promise/-/cross-spawn-promise-1.1.1.tgz#504af200af6b98e198bce768bc1730c6936ae01d"
+  integrity sha512-RTBGWL5FWQcg9orDOCcp4LvItNzUPcyEU9bwaeJX0rJ1IQxzucC48Y0/sQLp/g6t99IQgAlGIaesJS+gTn7tVQ==
   dependencies:
     cross-spawn "^7.0.1"
 
@@ -3326,10 +3326,10 @@ date-now@^0.1.4:
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
-debug@*, debug@^4.1.0, debug@^4.1.1, debug@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.0.tgz#efa41cbf14fc9448075367fdaaddf82376da211e"
-  integrity sha512-jjO6JD2rKfiZQnBoRzhRTbXjHLGLfH+UtGkWLc/UXAh/rzZMyjbgn0NcfFpqT8nd1kTtFnDiJcrIFkq4UKeJVg==
+debug@*, debug@^4.1.0, debug@^4.1.1, debug@^4.3.0, debug@~4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
   dependencies:
     ms "2.1.2"
 
@@ -3360,13 +3360,6 @@ debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5, debug@^3.2.6:
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   dependencies:
     ms "^2.1.1"
-
-debug@~4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
-  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  dependencies:
-    ms "2.1.2"
 
 debuglog@^1.0.1:
   version "1.0.1"
@@ -3749,12 +3742,12 @@ electron-publish@22.9.1:
     lazy-val "^1.0.4"
     mime "^2.4.6"
 
-electron-rebuild@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/electron-rebuild/-/electron-rebuild-2.3.4.tgz#59d49b37d5cc690aa60500aa5e5ecd168cbb5ba2"
-  integrity sha512-EHr1bkqXTN/jQJuh2/IunF9QGa9yOgpE9KdQ9A7VHshd7ycWvoXjWzaXaimfa1nu1l7vKqLLu7N2COe3Jn9NuA==
+electron-rebuild@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/electron-rebuild/-/electron-rebuild-2.3.5.tgz#10dc38d1ffe1515ba2eef8b8be8e973ad1e1d597"
+  integrity sha512-1sQ1DRtQGpglFhc3urD4olMJzt/wxlbnAAsf+WY2xHf5c50ZovivZvCXSpVgTOP9f4TzOMvelWyspyfhxQKHzQ==
   dependencies:
-    "@malept/cross-spawn-promise" "^1.1.0"
+    "@malept/cross-spawn-promise" "^1.1.1"
     colors "^1.3.3"
     debug "^4.1.1"
     detect-libc "^1.0.3"
