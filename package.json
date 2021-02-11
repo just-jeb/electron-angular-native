@@ -91,7 +91,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
-    "mocha": "^8.2.1",
+    "mocha": "^8.3.0",
     "nan": "^2.14.2",
     "node-loader": "^0.6.0",
     "spectron": "^7.0.0",
