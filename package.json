@@ -57,7 +57,7 @@
     "@angular/router": "^11.2.1",
     "core-js": "^3.9.0",
     "electron": "^6.0.3",
-    "ffi-napi": "^2.5.0",
+    "ffi-napi": "^3.1.0",
     "ngx-electron": "^2.1.1",
     "rxjs": "^6.6.3",
     "zone.js": "^0.9.1"
