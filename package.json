@@ -59,7 +59,7 @@
     "electron": "^6.0.3",
     "ffi-napi": "^2.5.0",
     "ngx-electron": "^2.1.1",
-    "rxjs": "^6.6.6",
+    "rxjs": "^6.6.7",
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
