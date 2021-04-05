@@ -79,7 +79,7 @@
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "codelyzer": "^6.0.1",
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.0.1",
     "cross-env": "^7.0.3",
     "electron-builder": "^22.10.5",
     "electron-rebuild": "^2.3.5",
