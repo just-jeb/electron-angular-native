@@ -94,7 +94,7 @@
     "mocha": "^8.3.2",
     "nan": "^2.14.2",
     "node-loader": "^0.6.0",
-    "spectron": "^7.0.0",
+    "spectron": "^14.0.0",
     "ts-mocha": "^8.0.0",
     "ts-node": "^9.1.1",
     "tslint": "^6.1.3",
